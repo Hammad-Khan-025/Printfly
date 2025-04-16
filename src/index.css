@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@400;500;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-malayalam: "Anek Malayalam", "sans-serif";
+  --font-glegoo: "Glegoo", "sans-serif";
+}
+
+body {
+  @apply bg-black;
+  font-family: 'Hermeneus One', sans-serif;
+}
+
+@font-face {
+  font-family: 'Hermeneus One';
+  src: url('./assets/fonts/HermeneusOne.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
