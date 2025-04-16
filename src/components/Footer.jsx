@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="w-full h-[1px] mx-auto bg-[#434343] rounded-full"></div>
       <div className="">
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-14 sm:gap-20 items-center justify-between max-w-screen-xl mx-auto  py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-14 sm:gap-16 items-center justify-between max-w-screen-xl mx-auto  py-12">
           {/* Social Icons and Heading */}
           <div className="flex flex-col items-start md:items-end gap-4 text-[#DAD9D9] px-6">
             <div className="flex justify-center md:justify-start gap-6 mb-4">
