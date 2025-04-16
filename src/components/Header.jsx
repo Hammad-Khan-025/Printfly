@@ -10,6 +10,23 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
+
+  const menuItems = [
+    { label: "Home", id: "home" },
+    { label: "Services", id: "services" },
+    { label: "Work", id: "work" },
+    { label: "Clients", id: "clients" },
+    { label: "Blogs", id: "blogs" },
+    { label: "Contact", id: "contact" },
+  ];
+
   return (
     <header className="flex justify-between items-center max-w-screen-xl mx-auto p-5 sm:p-8">
       {/* Logo */}
@@ -22,12 +39,11 @@ const Header = () => {
 
       {/* Menu for larger screens */}
       <ul className="hidden md:flex uppercase items-center gap-10 text-[#B2B1B1] text-sm tracking-wide pr-28">
-        <li>Home</li>
-        <li>Services</li>
-        <li>Work</li>
-        <li>Clients</li>
-        <li>Blogs</li>
-        <li>Contact</li>
+        {menuItems.map((item) => (
+          <li key={item.id} className="cursor-pointer" onClick={() => scrollToSection(item.id)}>
+            {item.label}
+          </li>
+        ))}
       </ul>
 
       {/* Dropdown Menu for smaller screens */}
@@ -37,24 +53,11 @@ const Header = () => {
         }`}
       >
         <ul className="flex flex-col items-center uppercase text-[#B2B1B1] text-sm tracking-wide gap-6 py-10 h-full">
-          <li onClick={toggleMenu} className="cursor-pointer">
-            Home
-          </li>
-          <li onClick={toggleMenu} className="cursor-pointer">
-            Services
-          </li>
-          <li onClick={toggleMenu} className="cursor-pointer">
-            Work
-          </li>
-          <li onClick={toggleMenu} className="cursor-pointer">
-            Clients
-          </li>
-          <li onClick={toggleMenu} className="cursor-pointer">
-            Blogs
-          </li>
-          <li onClick={toggleMenu} className="cursor-pointer">
-            Contact
-          </li>
+          {menuItems.map((item) => (
+            <li key={item.id} onClick={() => scrollToSection(item.id)} className="cursor-pointer">
+              {item.label}
+            </li>
+          ))}
         </ul>
       </div>
     </header>
