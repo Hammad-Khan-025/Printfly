@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/home-images/printfly-logo.png";
 import { RiMenu3Line } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
@@ -39,11 +40,19 @@ const Header = () => {
 
       {/* Menu for larger screens */}
       <ul className="hidden md:flex uppercase items-center gap-10 text-[#B2B1B1] text-sm tracking-wide pr-28">
-        {menuItems.map((item) => (
-          <li key={item.id} className="cursor-pointer" onClick={() => scrollToSection(item.id)}>
-            {item.label}
-          </li>
-        ))}
+        {menuItems.map((item) =>
+          item.label === "Home" ? (
+            <li key={item.id}>
+              <Link to="/" className="cursor-pointer">
+                {item.label}
+              </Link>
+            </li>
+          ) : (
+            <li key={item.id} className="cursor-pointer" onClick={() => scrollToSection(item.id)}>
+              {item.label}
+            </li>
+          )
+        )}
       </ul>
 
       {/* Dropdown Menu for smaller screens */}
@@ -53,11 +62,19 @@ const Header = () => {
         }`}
       >
         <ul className="flex flex-col items-center uppercase text-[#B2B1B1] text-sm tracking-wide gap-6 py-10 h-full">
-          {menuItems.map((item) => (
-            <li key={item.id} onClick={() => scrollToSection(item.id)} className="cursor-pointer">
-              {item.label}
-            </li>
-          ))}
+          {menuItems.map((item) =>
+            item.label === "Home" ? (
+              <li key={item.id} onClick={() => setIsMenuOpen(false)}>
+                <Link to="/" className="cursor-pointer">
+                  {item.label}
+                </Link>
+              </li>
+            ) : (
+              <li key={item.id} onClick={() => scrollToSection(item.id)} className="cursor-pointer">
+                {item.label}
+              </li>
+            )
+          )}
         </ul>
       </div>
     </header>

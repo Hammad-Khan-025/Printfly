@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
-const WorkCarousel = ({ images }) => {
+const ImagesSlide = ({ images, title, para }) => {
   const [startIndex, setStartIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(1); // default to 1 image
 
@@ -41,6 +41,11 @@ const WorkCarousel = ({ images }) => {
 
   return (
     <>
+      <div className="text-center mb-10 sm:mb-16">
+                <h2 className="text-2xl sm:text-4xl text-[#B2B1B1] tracking-wide">{title}</h2>
+                <p className="text-[#E9204F] mt-2 text-sm sm:text-base">{para}</p>
+                <div className="w-66 h-[1px] mt-4 mx-auto bg-[#E9204F] rounded-full"></div>
+              </div>
       <div className="relative">
         <div className="flex overflow-hidden items-center gap-5 px-5">
           {visibleImages.map((image, index) => (
@@ -80,16 +85,16 @@ const WorkCarousel = ({ images }) => {
         </div>
 
         {/* Arrows below image for mobile only */}
-        <div className="flex justify-center gap-6 mt-4 sm:hidden">
+        <div className="flex justify-center gap-6 mt-4 sm:hidden ">
           <button
             onClick={handlePrev}
-            className="text-white p-2 rounded-full bg-black bg-opacity-60"
+            className="text-white p-2 rounded-full bg-black bg-opacity-60 cursor-pointer"
           >
             <FaChevronLeft />
           </button>
           <button
             onClick={handleNext}
-            className="text-white p-2 rounded-full bg-black bg-opacity-60"
+            className="text-white p-2 rounded-full bg-black bg-opacity-60 cursor-pointer"
           >
             <FaChevronRight />
           </button>
@@ -111,4 +116,4 @@ const WorkCarousel = ({ images }) => {
   );
 };
 
-export default WorkCarousel;
+export default ImagesSlide;

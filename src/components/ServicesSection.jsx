@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import {
-  FaChevronRight
-} from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import { FaChevronRight } from "react-icons/fa6";
+
 import icon1 from "../assets/home-images/services-images/icon1.png";
 import icon2 from "../assets/home-images/services-images/icon2.png";
 import icon3 from "../assets/home-images/services-images/icon3.png";
@@ -16,26 +16,23 @@ import icon11 from "../assets/home-images/services-images/icon11.png";
 import icon12 from "../assets/home-images/services-images/icon12.png";
 
 const ServicesSection = () => {
-  const services = [
-    { title: "Graphic Designing", icon: icon1 },
-    { title: "UI/UX Design", icon: icon2 },
-    { title: "E-Learning Training Courses", icon: icon3 },
-    { title: "Desktop Publication", icon: icon4 },
-    { title: "Web & App Development", icon: icon5 },
-    { title: "E-Learning Training Videos", icon: icon6 },
-    { title: "Illustration Design", icon: icon7 },
-    { title: "Search Engine Optimization", icon: icon8 },
-    { title: "Documentary Videos", icon: icon9 },
-    { title: "Printing Publication", icon: icon10 },
-    { title: "E-Commerce Store Services", icon: icon11 },
-    { title: "Illustrations Videos", icon: icon12 },
-  ];
-
   const [activeService, setActiveService] = useState(null);
 
-  const handleClick = (index) => {
-    setActiveService(index);
-  };
+  const services = [
+    { title: "Graphic Designing", icon: icon1, path: "/graphic-designing" },
+    { title: "UI/UX Design", icon: icon2, path: "/ui-ux-design" },
+    { title: "E-Learning Training Courses", icon: icon3, path: "/e-learning-training-courses" },
+    { title: "Desktop Publication", icon: icon4, path: "/desktop-publication" },
+    { title: "Web & App Development", icon: icon5, path: "/web-app-development" },
+    { title: "E-Learning Training Videos", icon: icon6, path: "/e-learning-training-videos" },
+    { title: "Illustration Design", icon: icon7, path: "/illustration-design" },
+    { title: "Search Engine Optimization", icon: icon8, path: "/search-engine-optimization" },
+    { title: "Documentary Videos", icon: icon9, path: "/documentary-videos" },
+    { title: "Printing Publication", icon: icon10, path: "/printing-publication" },
+    { title: "E-Commerce Store Services", icon: icon11, path: "/ecommerce-store-services" },
+    { title: "Illustrations Videos", icon: icon12, path: "/illustrations-videos" },
+  ];
+  
 
   return (
     <section className="bg-[#101010] border-t border-b border-[#434343] pt-3 sm:pt-10 pb-5 sm:pb-20">
@@ -47,9 +44,10 @@ const ServicesSection = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {services.map((service, index) => (
-            <button
+            <Link
               key={index}
-              onClick={() => handleClick(index)}
+              to={service.path}
+              onClick={() => setActiveService(index)}
               className={`flex items-center justify-between p-4 transition-all uppercase cursor-pointer ${
                 activeService === index
                   ? "bg-[#E9204F] text-white"
@@ -67,7 +65,7 @@ const ServicesSection = () => {
                 </span>
               </div>
               <FaChevronRight />
-            </button>
+            </Link>
           ))}
         </div>
       </div>
