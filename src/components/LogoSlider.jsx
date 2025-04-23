@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { FaChevronRight, FaChevronLeft  } from "react-icons/fa6";
-import logo from "../assets/home-images/work-images/graybg.png";
-import logo2 from "../assets/home-images/work-images/client-image.png";
+import logoSlider1 from "../assets/home-images/logo-slider/slider1.png";
+import logoSlider2 from "../assets/home-images/logo-slider/slider2.png";
+import logoSlider3 from "../assets/home-images/logo-slider/slider3.png";
+import logoSlider4 from "../assets/home-images/logo-slider/slider4.png";
+import logoSlider5 from "../assets/home-images/logo-slider/slider5.png";
+import logoSlider6 from "../assets/home-images/logo-slider/slider6.png";
 
 const logos = [
-  logo,
-  logo2,
-  logo,
-  logo2,
-  logo,
-  logo2,
-  logo,
-  logo,
-  logo,
+  logoSlider1,
+  logoSlider2,
+  logoSlider3,
+  logoSlider4,
+  logoSlider5,
+  logoSlider6,
 ];
 
 const ClientCarousal = () => {

@@ -78,7 +78,7 @@ const SingleService = ({
         <div className="flex items-center max-w-screen-xl mx-auto gap-6 sm:gap-20 px-4">
           <img src={logo} alt="Service Icon" className="w-16 sm:w-auto" />
           <div className="text-[#B2B1B1] flex flex-col">
-            <h1 className="text-xl sm:text-[2.4rem] tracking-wide mb-2">{title}</h1>
+            <h1 className="text-xl sm:text-[2.4rem] tracking-wide mb-2 uppercase">{title}</h1>
             <p className=" max-w-[22rem] text-xs font-glegoo leading-6">
               {description}
             </p>
@@ -90,7 +90,7 @@ const SingleService = ({
       <div className="w-full h-[1px] mx-auto bg-[#434343] rounded-full"></div>
       <div className="bg-[#101010] px-4 sm:px-0">
         <div className="max-w-screen-xl mx-auto py-10 sm:py-16 tracking-wide">
-          <h1 className="text-[#B2B1B1] text-2xl sm:text-4xl font-black font-glegoo">
+          <h1 className="text-[#B2B1B1] text-2xl sm:text-4xl font-black font-glegoo uppercase">
             {aboutTitle}
           </h1>
           <p className="text-[#B2B1B1] text-sm sm:text-xl py-5 leading-7 sm:leading-10 font-glegoo">

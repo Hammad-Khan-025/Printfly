@@ -13,17 +13,17 @@ import icon10 from "../assets/home-images/services-images/icon10.png";
 import icon11 from "../assets/home-images/services-images/icon11.png";
 import icon12 from "../assets/home-images/services-images/icon12.png";
 
-import workSlider1 from "../assets/home-images/work-images/carousal1.png";
-import workSlider2 from "../assets/home-images/work-images/carousal2.png";
-import workSlider3 from "../assets/home-images/work-images/laptop.jpg";
-import workSlider4 from "../assets/home-images/work-images/client-image.png";
-import workSlider5 from "../assets/home-images/work-images/shoes.jpg";
+import workSlider1 from "../assets/home-images/work-images/slider1.png";
+import workSlider2 from "../assets/home-images/work-images/slider2.png";
+import workSlider3 from "../assets/home-images/work-images/slider3.png";
+import workSlider4 from "../assets/home-images/work-images/slider4.png";
+import workSlider5 from "../assets/home-images/work-images/slider5.png";
 
-import blogSlider1 from "../assets/home-images/blog-images/carousal2.png";
-import blogSlider2 from "../assets/home-images/blog-images/client-image.png";
-import blogSlider3 from "../assets/home-images/blog-images/carousal1.png";
-import blogSlider4 from "../assets/home-images/blog-images/laptop.jpg";
-import blogSlider5 from "../assets/home-images/blog-images/shoes.jpg";
+import blogSlider1 from "../assets/home-images/blog-images/slider1.png";
+import blogSlider2 from "../assets/home-images/blog-images/slider2.png";
+import blogSlider3 from "../assets/home-images/blog-images/slider3.png";
+import blogSlider4 from "../assets/home-images/blog-images/slider4.png";
+import blogSlider5 from "../assets/home-images/blog-images/slider5.png";
 
 import LogoSlider from "../components/LogoSlider";
 import HeroSection from "../components/HeroSection";

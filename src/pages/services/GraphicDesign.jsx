@@ -1,6 +1,6 @@
 import React from "react";
-import bgImage from "../../assets/home-images/services-images/graphic-design/graphic-bgImage.png";
-import logo from "../../assets/home-images/services-images/graphic-design/graphic-logo.png";
+import bgImage from "../../assets/home-images/services-images/graphic-design/bgImage.png";
+import logo from "../../assets/home-images/services-images/graphic-design/logo.png";
 import img1 from "../../assets/home-images/services-images/graphic-design/img1.png";
 import img2 from "../../assets/home-images/services-images/graphic-design/img2.png";
 import img3 from "../../assets/home-images/services-images/graphic-design/img3.png";
@@ -8,11 +8,11 @@ import img4 from "../../assets/home-images/services-images/graphic-design/img4.p
 import img5 from "../../assets/home-images/services-images/graphic-design/img5.png";
 import img6 from "../../assets/home-images/services-images/graphic-design/img6.png";
 
-import slider1 from "../../assets/home-images/services-images/graphic-design/img6.png";
-import slider2 from "../../assets/home-images/services-images/graphic-design/img1.png";
-import slider3 from "../../assets/home-images/services-images/graphic-design/img6.png";
-import slider4 from "../../assets/home-images/services-images/graphic-design/img1.png";
-import slider5 from "../../assets/home-images/services-images/graphic-design/img6.png";
+import slider1 from "../../assets/home-images/services-images/graphic-design/slider1.png";
+import slider2 from "../../assets/home-images/services-images/graphic-design/slider2.png";
+import slider3 from "../../assets/home-images/services-images/graphic-design/slider3.png";
+import slider4 from "../../assets/home-images/services-images/graphic-design/slider4.png";
+import slider5 from "../../assets/home-images/services-images/graphic-design/slider5.png";
 
 import SingleService from "../../components/SingleService";
 import ImagesSlider from "../../components/ImagesSlider";
