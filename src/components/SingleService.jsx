@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const SingleService = ({
   logo,
@@ -16,7 +16,10 @@ const SingleService = ({
   img6,
 }) => {
   const gridItems = [
-    { type: "image", src: img1, alt: "Design concept" },
+    {
+      type: "slider",
+      images: img1,
+    },
     {
       type: "text",
       title: "Typography:",
@@ -24,14 +27,20 @@ const SingleService = ({
       and visually appealing. This includes the selection of typefaces, point sizes,
       line lengths, line-spacing, and letter-spacing.`,
     },
-    { type: "image", src: img2, alt: "Typography example" },
+    {
+      type: "slider",
+      images: img2,
+    },
     {
       type: "text",
       title: "Color Theory:",
       content: `The science and art of using color, including the understanding of
       color wheel relationships, color harmony, and the psychological impact of colors.`,
     },
-    { type: "image", src: img3, alt: "Color usage" },
+    {
+      type: "slider",
+      images: img3,
+    },
     {
       type: "text",
       title: "Layout and Composition:",
@@ -39,7 +48,10 @@ const SingleService = ({
       ensure that the design is aesthetically pleasing and effectively communicates the
       intended message.`,
     },
-    { type: "image", src: img4, alt: "Design concept" },
+    {
+      type: "slider",
+      images: img4,
+    },
     {
       type: "text",
       title: "Typography:",
@@ -47,14 +59,20 @@ const SingleService = ({
       and visually appealing. This includes the selection of typefaces, point sizes,
       line lengths, line-spacing, and letter-spacing.`,
     },
-    { type: "image", src: img5, alt: "Typography example" },
+    {
+      type: "slider",
+      images: img5,
+    },
     {
       type: "text",
       title: "Color Theory:",
       content: `The science and art of using color, including the understanding of
       color wheel relationships, color harmony, and the psychological impact of colors.`,
     },
-    { type: "image", src: img6, alt: "Color usage" },
+    {
+      type: "slider",
+      images: img6,
+    },
     {
       type: "text",
       title: "Layout and Composition:",
@@ -64,9 +82,46 @@ const SingleService = ({
     },
   ];
 
+  const MiniSlider = ({ images }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 3000);
+      return () => clearInterval(interval);
+    }, [images.length]);
+  
+    return (
+      <div className="relative w-full h-full overflow-hidden">
+        {images.map((img, idx) => {
+          const isCurrent = idx === currentIndex;
+          const isPrevious =
+            (idx === (currentIndex - 1 + images.length) % images.length);
+  
+          return (
+            <img
+              key={idx}
+              src={img}
+              alt={`Slide ${idx}`}
+              className={`absolute top-0 left-0 w-full h-full object-cover transition-transform duration-700 ease-in-out ${
+                isCurrent
+                  ? "translate-y-0 z-20"
+                  : isPrevious
+                  ? "translate-y-full z-10"
+                  : "-translate-y-full z-0"
+              }`}
+            />
+          );
+        })}
+      </div>
+    );
+  };
+  
+
   return (
     <section>
-      {/* hero section */}
+      {/* Hero Section */}
       <div
         style={{
           backgroundImage: `url(${bgImage})`,
@@ -86,7 +141,7 @@ const SingleService = ({
         </div>
       </div>
 
-      {/* about section */}
+      {/* About Section */}
       <div className="w-full h-[1px] mx-auto bg-[#434343] rounded-full"></div>
       <div className="bg-[#101010] px-4 sm:px-0">
         <div className="max-w-screen-xl mx-auto py-10 sm:py-16 tracking-wide">
@@ -101,7 +156,7 @@ const SingleService = ({
       </div>
       <div className="w-full h-[1px] mx-auto bg-[#434343] rounded-full"></div>
 
-      {/*Grid Image section */}
+      {/* Grid Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-12 sm:py-20 px-5 sm:px-0 bg-black text-white max-w-screen-xl mx-auto">
         {gridItems.map((item, index) => (
           <div
@@ -112,12 +167,8 @@ const SingleService = ({
                 : ""
             }`}
           >
-            {item.type === "image" ? (
-              <img
-                src={item.src}
-                alt={item.alt}
-                className="w-full h-full object-cover"
-              />
+            {item.type === "slider" ? (
+              <MiniSlider images={item.images} />
             ) : (
               <div className="font-glegoo sm:px-8">
                 <h2 className="font-semibold text-xl sm:text-2xl mb-2 text-[#121212]">
@@ -131,7 +182,6 @@ const SingleService = ({
           </div>
         ))}
       </div>
-
     </section>
   );
 };

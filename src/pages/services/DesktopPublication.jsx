@@ -1,30 +1,58 @@
 import React from "react";
-import bgImage from "../../assets/home-images/services-images/graphic-design/bgImage.png";
-import logo from "../../assets/home-images/services-images/graphic-design/logo.png";
-import img1 from "../../assets/home-images/services-images/graphic-design/img1.png";
-import img2 from "../../assets/home-images/services-images/graphic-design/img2.png";
-import img3 from "../../assets/home-images/services-images/graphic-design/img3.png";
-import img4 from "../../assets/home-images/services-images/graphic-design/img4.png";
-import img5 from "../../assets/home-images/services-images/graphic-design/img5.png";
-import img6 from "../../assets/home-images/services-images/graphic-design/img6.png";
+import bgImage from "../../assets/home-images/services-images/desktop-publication/bgImage.png";
+import logo from "../../assets/home-images/services-images/desktop-publication/logo.png";
 
-import slider1 from "../../assets/home-images/services-images/graphic-design/slider1.png";
-import slider2 from "../../assets/home-images/services-images/graphic-design/slider2.png";
-import slider3 from "../../assets/home-images/services-images/graphic-design/slider3.png";
-import slider4 from "../../assets/home-images/services-images/graphic-design/slider4.png";
-import slider5 from "../../assets/home-images/services-images/graphic-design/slider5.png";
+import img1a from "../../assets/home-images/services-images/desktop-publication/img1/img1a.png";
+import img1b from "../../assets/home-images/services-images/desktop-publication/img1/img1b.png";
+import img1c from "../../assets/home-images/services-images/desktop-publication/img1/img1c.png";
+
+import img2a from "../../assets/home-images/services-images/desktop-publication/img2/img2a.png";
+import img2b from "../../assets/home-images/services-images/desktop-publication/img2/img2b.png";
+import img2c from "../../assets/home-images/services-images/desktop-publication/img2/img2c.png";
+
+import img3a from "../../assets/home-images/services-images/desktop-publication/img3/img3a.png";
+import img3b from "../../assets/home-images/services-images/desktop-publication/img3/img3b.png";
+import img3c from "../../assets/home-images/services-images/desktop-publication/img3/img3c.png";
+
+import img4a from "../../assets/home-images/services-images/desktop-publication/img4/img4a.png";
+import img4b from "../../assets/home-images/services-images/desktop-publication/img4/img4b.png";
+import img4c from "../../assets/home-images/services-images/desktop-publication/img4/img4c.png";
+
+import img5a from "../../assets/home-images/services-images/desktop-publication/img5/img5a.png";
+import img5b from "../../assets/home-images/services-images/desktop-publication/img5/img5b.png";
+import img5c from "../../assets/home-images/services-images/desktop-publication/img5/img5c.png";
+
+import img6a from "../../assets/home-images/services-images/desktop-publication/img6//img6a.png";
+import img6b from "../../assets/home-images/services-images/desktop-publication/img6//img6b.png";
+import img6c from "../../assets/home-images/services-images/desktop-publication/img6//img6c.png";
+
+import slider1 from "../../assets/home-images/services-images/desktop-publication/slider1.png";
+import slider2 from "../../assets/home-images/services-images/desktop-publication/slider2.png";
+import slider3 from "../../assets/home-images/services-images/desktop-publication/slider3.png";
+import slider4 from "../../assets/home-images/services-images/desktop-publication/slider4.png";
+import slider5 from "../../assets/home-images/services-images/desktop-publication/slider5.png";
 
 import SingleService from "../../components/SingleService";
 import ImagesSlider from "../../components/ImagesSlider";
 
 const DesktopPublication = () => {
+
+  const sliderImages = [
+    [img1a, img1b, img1c], 
+    [img2a, img2b, img2c], 
+    [img3a, img3b, img3c], 
+    [img4a, img4b, img4c], 
+    [img5a, img5b, img5c], 
+    [img6a, img6b, img6c], 
+  ];
+
   const images = [slider1, slider2, slider3, slider4, slider5];
   return (
     <article>
       <SingleService
         logo={logo}
         bgImage={bgImage}
-        title="desktop publication"
+        title="Desktop Publication"
         description={
           <>
             Graphic design is the art of{" "}
@@ -32,7 +60,7 @@ const DesktopPublication = () => {
             through typography, imagery, and layout.
           </>
         }
-        aboutTitle="WHAT IS desktop publication?"
+        aboutTitle="WHAT IS Desktop Publication?"
         aboutPara1={
           <>
             Graphic design is the art of visual communication using{" "}
@@ -45,12 +73,12 @@ const DesktopPublication = () => {
           </>
         }
         aboutPara2="Graphic design is a multidisciplinary field that combines art and technology to communicate ideas through visual content. It involves creating and combining symbols, images, and text to form visual representations of messages and concepts. Here's a comprehensive description of graphic design, encompassing its core elements, tools, and applications:"
-        img1={img1}
-        img2={img2}
-        img3={img3}
-        img4={img4}
-        img5={img5}
-        img6={img6}
+        img1={sliderImages[0]} 
+        img2={sliderImages[1]} 
+        img3={sliderImages[2]} 
+        img4={sliderImages[3]} 
+        img5={sliderImages[4]} 
+        img6={sliderImages[5]} 
       />
 
       {/* client work section */}

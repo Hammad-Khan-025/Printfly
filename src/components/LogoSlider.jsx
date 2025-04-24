@@ -36,6 +36,17 @@ const ClientCarousal = () => {
     return () => window.removeEventListener('resize', updateVisibleCount);
   }, []);
 
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setStartIndex((prevIndex) =>
+        prevIndex + 1 > logos.length - visibleCount ? 0 : prevIndex + 1
+      );
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, [logos.length, visibleCount]);
+
   const nextSlide = () => {
     setStartIndex((prevIndex) =>
       prevIndex + 1 > logos.length - visibleCount ? 0 : prevIndex + 1

@@ -1,10 +1,9 @@
-// components/WorkCarousel.jsx
 import React, { useEffect, useState } from "react";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
 const ImagesSlide = ({ images, title, para }) => {
   const [startIndex, setStartIndex] = useState(0);
-  const [itemsPerView, setItemsPerView] = useState(1); // default to 1 image
+  const [itemsPerView, setItemsPerView] = useState(1); 
 
   useEffect(() => {
     const updateItemsPerView = () => {
@@ -19,10 +18,19 @@ const ImagesSlide = ({ images, title, para }) => {
     };
 
     updateItemsPerView(); // Initial check
-    window.addEventListener("resize", updateItemsPerView); // Listen for screen resize
+    window.addEventListener("resize", updateItemsPerView); 
 
-    return () => window.removeEventListener("resize", updateItemsPerView); // Cleanup
+    return () => window.removeEventListener("resize", updateItemsPerView);
   }, []);
+
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setStartIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); 
+
+    return () => clearInterval(interval); 
+  }, [images.length]);
 
   const handleNext = () => {
     setStartIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -42,10 +50,10 @@ const ImagesSlide = ({ images, title, para }) => {
   return (
     <>
       <div className="text-center mb-10 sm:mb-16">
-                <h2 className="text-2xl sm:text-4xl text-[#B2B1B1] tracking-wide">{title}</h2>
-                <p className="text-[#E9204F] mt-2 text-sm sm:text-base">{para}</p>
-                <div className="w-66 h-[1px] mt-4 mx-auto bg-[#E9204F] rounded-full"></div>
-              </div>
+        <h2 className="text-2xl sm:text-4xl text-[#B2B1B1] tracking-wide">{title}</h2>
+        <p className="text-[#E9204F] mt-2 text-sm sm:text-base">{para}</p>
+        <div className="w-66 h-[1px] mt-4 mx-auto bg-[#E9204F] rounded-full"></div>
+      </div>
       <div className="relative">
         <div className="flex overflow-hidden items-center gap-5 px-5">
           {visibleImages.map((image, index) => (
