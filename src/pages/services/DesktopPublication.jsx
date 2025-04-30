@@ -46,39 +46,74 @@ const DesktopPublication = () => {
     [img6a, img6b, img6c], 
   ];
 
+  const gridItems = [
+    {
+      type: "slider",
+      images: sliderImages[0],
+    },
+    {
+      type: "text",
+      title: "Brochures, Flyers, and Posters:",
+      content: `Beautiful layouts that balance visuals and messaging to attract and engage.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[1],
+    },
+    {
+      type: "text",
+      title: "Magazines and Newsletters:",
+      content: `Editorial designs that captivate readers and enhance storytelling.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[2],
+    },
+    {
+      type: "text",
+      title: "Books and eBooks:",
+      content: `lear, structured layouts for a smooth and enjoyable reading experience.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[3],
+    },
+    {
+      type: "text",
+      title: "Corporate Reports and Manuals:",
+      content: `Professional documents that reflect your company’s credibility and attention to detail`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[4],
+    },
+    {
+      type: "text",
+      title: "Catalogs and Product Sheets:",
+      content: `Organized, visually attractive materials that help showcase and sell your products.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[5],
+    },
+    {
+      type: "text",
+      title: "Multilingual Desktop Publishing:",
+      content: `Formatting materials in different languages while maintaining visual consistency`,
+    },
+  ];
+
   const images = [slider1, slider2, slider3, slider4, slider5];
   return (
     <article>
       <SingleService
         logo={logo}
-        bgImage={bgImage}
+        // bgImage={bgImage}
         title="Desktop Publication"
-        description={
-          <>
-            Graphic design is the art of{" "}
-            <span className="text-[#E9204F]">visually communicating</span> ideas
-            through typography, imagery, and layout.
-          </>
-        }
-        aboutTitle="WHAT IS Desktop Publication?"
-        aboutPara1={
-          <>
-            Graphic design is the art of visual communication using{" "}
-            <span className="text-[#E9204F]">
-              images, typography, and colors to convey messages.
-            </span>
-            <br />
-            It plays a key role in branding, marketing, and storytelling across
-            various industries.
-          </>
-        }
-        aboutPara2="Graphic design is a multidisciplinary field that combines art and technology to communicate ideas through visual content. It involves creating and combining symbols, images, and text to form visual representations of messages and concepts. Here's a comprehensive description of graphic design, encompassing its core elements, tools, and applications:"
-        img1={sliderImages[0]} 
-        img2={sliderImages[1]} 
-        img3={sliderImages[2]} 
-        img4={sliderImages[3]} 
-        img5={sliderImages[4]} 
-        img6={sliderImages[5]} 
+        aboutPara1="At Print Fly communications, we specialize in Desktop Publishing (DTP) solutions that combine creativity with precision. Whether you need beautifully formatted brochures, magazines, eBooks, or corporate documents, we ensure your content is visually appealing, brand-consistent, and ready for print or digital distribution."
+
+        aboutPara2="High-quality print-ready and digital files. Brand consistency across all materials. Fast turnaround times with meticulous quality control. Custom designs tailored to your audience and goals"
+        gridItems={gridItems}
       />
 
       {/* client work section */}

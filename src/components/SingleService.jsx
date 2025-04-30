@@ -5,100 +5,28 @@ const SingleService = ({
   bgImage,
   title,
   description,
-  aboutTitle,
   aboutPara1,
   aboutPara2,
-  img1,
-  img2,
-  img3,
-  img4,
-  img5,
-  img6,
+  gridItems
 }) => {
-  const gridItems = [
-    {
-      type: "slider",
-      images: img1,
-    },
-    {
-      type: "text",
-      title: "Typography:",
-      content: `The art of arranging type to make written language legible, readable,
-      and visually appealing. This includes the selection of typefaces, point sizes,
-      line lengths, line-spacing, and letter-spacing.`,
-    },
-    {
-      type: "slider",
-      images: img2,
-    },
-    {
-      type: "text",
-      title: "Color Theory:",
-      content: `The science and art of using color, including the understanding of
-      color wheel relationships, color harmony, and the psychological impact of colors.`,
-    },
-    {
-      type: "slider",
-      images: img3,
-    },
-    {
-      type: "text",
-      title: "Layout and Composition:",
-      content: `The arrangement of visual elements on a page. Good layout and composition
-      ensure that the design is aesthetically pleasing and effectively communicates the
-      intended message.`,
-    },
-    {
-      type: "slider",
-      images: img4,
-    },
-    {
-      type: "text",
-      title: "Typography:",
-      content: `The art of arranging type to make written language legible, readable,
-      and visually appealing. This includes the selection of typefaces, point sizes,
-      line lengths, line-spacing, and letter-spacing.`,
-    },
-    {
-      type: "slider",
-      images: img5,
-    },
-    {
-      type: "text",
-      title: "Color Theory:",
-      content: `The science and art of using color, including the understanding of
-      color wheel relationships, color harmony, and the psychological impact of colors.`,
-    },
-    {
-      type: "slider",
-      images: img6,
-    },
-    {
-      type: "text",
-      title: "Layout and Composition:",
-      content: `The arrangement of visual elements on a page. Good layout and composition
-      ensure that the design is aesthetically pleasing and effectively communicates the
-      intended message.`,
-    },
-  ];
 
   const MiniSlider = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-  
+
     useEffect(() => {
       const interval = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
       }, 3000);
       return () => clearInterval(interval);
     }, [images.length]);
-  
+
     return (
       <div className="relative w-full h-full overflow-hidden">
         {images.map((img, idx) => {
           const isCurrent = idx === currentIndex;
           const isPrevious =
-            (idx === (currentIndex - 1 + images.length) % images.length);
-  
+            idx === (currentIndex - 1 + images.length) % images.length;
+
           return (
             <img
               key={idx}
@@ -117,7 +45,6 @@ const SingleService = ({
       </div>
     );
   };
-  
 
   return (
     <section>
@@ -133,7 +60,9 @@ const SingleService = ({
         <div className="flex items-center max-w-screen-xl mx-auto gap-6 sm:gap-20 px-4">
           <img src={logo} alt="Service Icon" className="w-16 sm:w-auto" />
           <div className="text-[#B2B1B1] flex flex-col">
-            <h1 className="text-xl sm:text-[2.4rem] tracking-wide mb-2 uppercase">{title}</h1>
+            <h1 className="text-xl sm:text-4xl tracking-wide mb-2 uppercase">
+              {title}
+            </h1>
             <p className=" max-w-[22rem] text-xs font-glegoo leading-6">
               {description}
             </p>
@@ -145,13 +74,17 @@ const SingleService = ({
       <div className="w-full h-[1px] mx-auto bg-[#434343] rounded-full"></div>
       <div className="bg-[#101010] px-4 sm:px-0">
         <div className="max-w-screen-xl mx-auto py-10 sm:py-16 tracking-wide">
-          <h1 className="text-[#B2B1B1] text-2xl sm:text-4xl font-black font-glegoo uppercase">
-            {aboutTitle}
-          </h1>
           <p className="text-[#B2B1B1] text-sm sm:text-xl py-5 leading-7 sm:leading-10 font-glegoo">
             {aboutPara1}
           </p>
-          <p className="text-[#555454] text-lg sm:text-3xl leading-7 sm:leading-14">{aboutPara2}</p>
+          <div className="text-[#555454] text-lg sm:text-3xl leading-7 sm:leading-14 mt-6 sm:mt-10">
+            {aboutPara2
+              .split(".")
+              .filter((sentence) => sentence.trim() !== "")
+              .map((sentence, idx) => (
+                <p key={idx}>{sentence.trim()}.</p>
+              ))}
+          </div>
         </div>
       </div>
       <div className="w-full h-[1px] mx-auto bg-[#434343] rounded-full"></div>

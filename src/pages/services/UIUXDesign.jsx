@@ -46,6 +46,64 @@ const UIUXDesign = () => {
     [img6a, img6b, img6c], 
   ];
 
+  const gridItems = [
+    {
+      type: "slider",
+      images: sliderImages[0],
+    },
+    {
+      type: "text",
+      title: "User Research & Persona Development:",
+      content: `Deep understanding of your target audience to design experiences that truly connect.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[1],
+    },
+    {
+      type: "text",
+      title: "Wireframing & Prototyping:",
+      content: `Fast, interactive prototypes and wireframes to visualize and refine your product early.
+`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[2],
+    },
+    {
+      type: "text",
+      title: "User Interface (UI) Design:",
+      content: `Pixel-perfect, visually appealing designs that enhance user interaction.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[3],
+    },
+    {
+      type: "text",
+      title: "User Experience (UX) Strategy:",
+      content: `Smart workflows and intuitive structures that make navigation effortless.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[4],
+    },
+    {
+      type: "text",
+      title: "Website and Web App Design:",
+      content: `Responsive, conversion-focused designs that work across every screen size.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[5],
+    },
+    {
+      type: "text",
+      title: "Usability Testing & Iteration:",
+      content: `Real user feedback to continuously optimize and enhance your product’s performance.`,
+    },
+  ];
+
   const images = [slider1, slider2, slider3, slider4, slider5];
   return (
     <article>
@@ -53,32 +111,10 @@ const UIUXDesign = () => {
         logo={logo}
         bgImage={bgImage}
         title="UI-UX Design"
-        description={
-          <>
-            Graphic design is the art of{" "}
-            <span className="text-[#E9204F]">visually communicating</span> ideas
-            through typography, imagery, and layout.
-          </>
-        }
-        aboutTitle="WHAT IS UI-UX Design?"
-        aboutPara1={
-          <>
-            Graphic design is the art of visual communication using{" "}
-            <span className="text-[#E9204F]">
-              images, typography, and colors to convey messages.
-            </span>
-            <br />
-            It plays a key role in branding, marketing, and storytelling across
-            various industries.
-          </>
-        }
-        aboutPara2="Graphic design is a multidisciplinary field that combines art and technology to communicate ideas through visual content. It involves creating and combining symbols, images, and text to form visual representations of messages and concepts. Here's a comprehensive description of graphic design, encompassing its core elements, tools, and applications:"
-        img1={sliderImages[0]} 
-        img2={sliderImages[1]} 
-        img3={sliderImages[2]} 
-        img4={sliderImages[3]} 
-        img5={sliderImages[4]} 
-        img6={sliderImages[5]} 
+        aboutPara1="At UI/UX Design, we design exceptional UI/UX experiences that combine beauty with functionality. Our focus is to create digital products that are not only visually stunning but also intuitive, user-friendly, and built to drive engagement and results."
+
+        aboutPara2="A great product isn't just built - it's designed with purpose. We help brands turn ideas into digital experiences that users love, trust, and recommend."
+        gridItems={gridItems}
       />
 
       {/* client work section */}

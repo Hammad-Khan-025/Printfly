@@ -46,6 +46,67 @@ const IllustrationDesign = () => {
     [img6a, img6b, img6c], 
   ];
 
+  const gridItems = [
+    {
+      type: "slider",
+      images: sliderImages[0],
+    },
+    {
+      type: "text",
+      title: "Book and Editorial Illustrations:",
+      content: `Beautiful, narrative-driven artwork for books, magazines, blogs, and digital publications..
+`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[1],
+    },
+    {
+      type: "text",
+      title: "Children’s Book Illustrations:",
+      content: `Colorful, imaginative visuals that captivate young readers and bring stories to life`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[2],
+    },
+    {
+      type: "text",
+      title: "Character Design:",
+      content: `Memorable and expressive characters for brands, animation, gaming, and advertising.
+
+`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[3],
+    },
+    {
+      type: "text",
+      title: "Product and Packaging Illustrations:",
+      content: `Custom illustrations that give your product a unique, standout appearance.
+`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[4],
+    },
+    {
+      type: "text",
+      title: "Custom Icons and Mascots:",
+      content: `Tailor-made icons and brand mascots that strengthen your visual identity.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[5],
+    },
+    {
+      type: "text",
+      title: "Concept Art and Storyboarding:",
+      content: `Pre-visualization artwork for animations, advertisements, games, and film projects.`,
+    },
+  ];
+
   const images = [slider1, slider2, slider3, slider4, slider5];
   return (
     <article>
@@ -53,32 +114,10 @@ const IllustrationDesign = () => {
         logo={logo}
         bgImage={bgImage}
         title="Illustration Design"
-        description={
-          <>
-            Graphic design is the art of{" "}
-            <span className="text-[#E9204F]">visually communicating</span> ideas
-            through typography, imagery, and layout.
-          </>
-        }
-        aboutTitle="WHAT IS Illustration Design?"
-        aboutPara1={
-          <>
-            Graphic design is the art of visual communication using{" "}
-            <span className="text-[#E9204F]">
-              images, typography, and colors to convey messages.
-            </span>
-            <br />
-            It plays a key role in branding, marketing, and storytelling across
-            various industries.
-          </>
-        }
-        aboutPara2="Graphic design is a multidisciplinary field that combines art and technology to communicate ideas through visual content. It involves creating and combining symbols, images, and text to form visual representations of messages and concepts. Here's a comprehensive description of graphic design, encompassing its core elements, tools, and applications:"
-        img1={sliderImages[0]} 
-        img2={sliderImages[1]} 
-        img3={sliderImages[2]} 
-        img4={sliderImages[3]} 
-        img5={sliderImages[4]} 
-        img6={sliderImages[5]} 
+        aboutPara1="At Print Fly, we specialize in creating custom illustrations that add character, emotion, and storytelling power to your brand or project. Whether you need illustrations for marketing campaigns, publishing, packaging, websites, or social media, we craft original artwork that captures attention and leaves a lasting impact."
+
+        aboutPara2="Illustration is more than art -it’s visual communication with emotion, personality, and storytelling at its core. We help businesses, publishers, and creators turn concepts into impactful artwork that resonates with their audiences."
+        gridItems={gridItems} 
       />
 
       {/* client work section */}

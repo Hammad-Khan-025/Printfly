@@ -46,39 +46,74 @@ const PrintingPublication = () => {
     [img6a, img6b, img6c], 
   ];
 
+  const gridItems = [
+    {
+      type: "slider",
+      images: sliderImages[0],
+    },
+    {
+      type: "text",
+      title: "Offset Printing:",
+      content: `Ideal for high-volume projects requiring sharp, consistent quality and color accuracy.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[1],
+    },
+    {
+      type: "text",
+      title: "Digital Printing:",
+      content: `Perfect for short runs, quick turnarounds, and personalized prints with vibrant results.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[2],
+    },
+    {
+      type: "text",
+      title: "Large Format Printing:",
+      content: `High-impact banners, posters, signs, and displays for events, promotions, and storefronts.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[3],
+    },
+    {
+      type: "text",
+      title: "Flexographic Printing:",
+      content: `A fast and cost-effective solution for printing on packaging materials like labels and bags.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[4],
+    },
+    {
+      type: "text",
+      title: "3D Printing:",
+      content: `Innovative prototyping and product development with detailed three-dimensional output.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[5],
+    },
+    {
+      type: "text",
+      title: "Screen Printing:",
+      content: `Best for apparel, packaging, and specialty surfaces with bold, durable colors.`,
+    },
+  ];
+
   const images = [slider1, slider2, slider3, slider4, slider5];
   return (
     <article>
       <SingleService
         logo={logo}
-        bgImage={bgImage}
+        // bgImage={bgImage}
         title="Printing Publication"
-        description={
-          <>
-            Graphic design is the art of{" "}
-            <span className="text-[#E9204F]">visually communicating</span> ideas
-            through typography, imagery, and layout.
-          </>
-        }
-        aboutTitle="WHAT IS Printing Publication?"
-        aboutPara1={
-          <>
-            Graphic design is the art of visual communication using{" "}
-            <span className="text-[#E9204F]">
-              images, typography, and colors to convey messages.
-            </span>
-            <br />
-            It plays a key role in branding, marketing, and storytelling across
-            various industries.
-          </>
-        }
-        aboutPara2="Graphic design is a multidisciplinary field that combines art and technology to communicate ideas through visual content. It involves creating and combining symbols, images, and text to form visual representations of messages and concepts. Here's a comprehensive description of graphic design, encompassing its core elements, tools, and applications:"
-        img1={sliderImages[0]} 
-        img2={sliderImages[1]} 
-        img3={sliderImages[2]} 
-        img4={sliderImages[3]} 
-        img5={sliderImages[4]} 
-        img6={sliderImages[5]} 
+        aboutPara1="At Print Fly Communications, we offer professional printing publication services that ensure your materials are produced with precision, vibrant quality, and a flawless finish. From business essentials to large marketing campaigns, we manage every detail-delivering printed products that make a powerful impression."
+
+        aboutPara2="Printed materials are more than just paper -they’re a tangible expression of your brand's identity. We combine expert craftsmanship, cutting-edge technology, and a deep commitment to excellence to deliver publications that you'll be proud to share."
+        gridItems={gridItems}
       />
 
       {/* client work section */}

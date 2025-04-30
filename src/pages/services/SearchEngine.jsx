@@ -46,39 +46,77 @@ const SearchEngine = () => {
     [img6a, img6b, img6c], 
   ];
 
+  const gridItems = [
+    {
+      type: "slider",
+      images: sliderImages[0],
+    },
+    {
+      type: "text",
+      title: "SEO Audit and Website Analysis:",
+      content: `In-depth technical and content audit to identify and fix SEO issues holding you back.
+`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[1],
+    },
+    {
+      type: "text",
+      title: "On-Page SEO Optimization:",
+      content: `Strategic optimization of titles, meta descriptions, headings, URLs, and page content for maximum visibility.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[2],
+    },
+    {
+      type: "text",
+      title: "Technical SEO:",
+      content: `Speed optimization, mobile responsiveness, structured data, and other backend improvements to boost rankings.
+
+`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[3],
+    },
+    {
+      type: "text",
+      title: "Keyword Research and Strategy:",
+      content: `Finding the most relevant, high-converting keywords to target your audience effectively.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[4],
+    },
+    {
+      type: "text",
+      title: "Content Creation and Optimization:",
+      content: `SEO-focused blog posts, landing pages, and web content that engage users and rank well.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[5],
+    },
+    {
+      type: "text",
+      title: "Local SEO Services:",
+      content: `Boost your local visibility with Google My Business optimization, local citations, and targeted local keywords.`,
+    },
+  ];
+
   const images = [slider1, slider2, slider3, slider4, slider5];
   return (
     <article>
       <SingleService
         logo={logo}
-        bgImage={bgImage}
+        // bgImage={bgImage}
         title="Search Engine Optimization"
-        description={
-          <>
-            Graphic design is the art of{" "}
-            <span className="text-[#E9204F]">visually communicating</span> ideas
-            through typography, imagery, and layout.
-          </>
-        }
-        aboutTitle="WHAT IS Search Engine Optimization?"
-        aboutPara1={
-          <>
-            Graphic design is the art of visual communication using{" "}
-            <span className="text-[#E9204F]">
-              images, typography, and colors to convey messages.
-            </span>
-            <br />
-            It plays a key role in branding, marketing, and storytelling across
-            various industries.
-          </>
-        }
-        aboutPara2="Graphic design is a multidisciplinary field that combines art and technology to communicate ideas through visual content. It involves creating and combining symbols, images, and text to form visual representations of messages and concepts. Here's a comprehensive description of graphic design, encompassing its core elements, tools, and applications:"
-        img1={sliderImages[0]} 
-        img2={sliderImages[1]} 
-        img3={sliderImages[2]} 
-        img4={sliderImages[3]} 
-        img5={sliderImages[4]} 
-        img6={sliderImages[5]} 
+        aboutPara1="At Print Fly Communications, we offer expert SEO services that help your website rank higher, attract more visitors, and convert traffic into real business results."
+
+        aboutPara2="A great website means little if no one can find it. Our SEO services help you increase visibility, attract quality traffic, and grow your business online — sustainably and effectively."
+        gridItems={gridItems}
       />
 
       {/* client work section */}

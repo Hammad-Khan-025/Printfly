@@ -2,18 +2,31 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa6";
 
-import icon1 from "../assets/home-images/services-images/icon1.png";
-import icon2 from "../assets/home-images/services-images/icon2.png";
-import icon3 from "../assets/home-images/services-images/icon3.png";
-import icon4 from "../assets/home-images/services-images/icon4.png";
-import icon5 from "../assets/home-images/services-images/icon5.png";
-import icon6 from "../assets/home-images/services-images/icon6.png";
-import icon7 from "../assets/home-images/services-images/icon7.png";
-import icon8 from "../assets/home-images/services-images/icon8.png";
-import icon9 from "../assets/home-images/services-images/icon9.png";
-import icon10 from "../assets/home-images/services-images/icon10.png";
-import icon11 from "../assets/home-images/services-images/icon11.png";
-import icon12 from "../assets/home-images/services-images/icon12.png";
+import icon1a from "../assets/home-images/services-images/icon1a.png";
+import icon2a from "../assets/home-images/services-images/icon2a.png";
+import icon3a from "../assets/home-images/services-images/icon3a.png";
+import icon4a from "../assets/home-images/services-images/icon4a.png";
+import icon5a from "../assets/home-images/services-images/icon5a.png";
+import icon6a from "../assets/home-images/services-images/icon6a.png";
+import icon7a from "../assets/home-images/services-images/icon7a.png";
+import icon8a from "../assets/home-images/services-images/icon8a.png";
+import icon9a from "../assets/home-images/services-images/icon9a.png";
+import icon10a from "../assets/home-images/services-images/icon10a.png";
+import icon11a from "../assets/home-images/services-images/icon11a.png";
+import icon12a from "../assets/home-images/services-images/icon12a.png";
+
+import icon1b from "../assets/home-images/services-images/icon1b.png";
+import icon2b from "../assets/home-images/services-images/icon2b.png";
+import icon3b from "../assets/home-images/services-images/icon3b.png";
+import icon4b from "../assets/home-images/services-images/icon4b.png";
+import icon5b from "../assets/home-images/services-images/icon5b.png";
+import icon6b from "../assets/home-images/services-images/icon6b.png";
+import icon7b from "../assets/home-images/services-images/icon7b.png";
+import icon8b from "../assets/home-images/services-images/icon8b.png";
+import icon9b from "../assets/home-images/services-images/icon9b.png";
+import icon10b from "../assets/home-images/services-images/icon10b.png";
+import icon11b from "../assets/home-images/services-images/icon11b.png";
+import icon12b from "../assets/home-images/services-images/icon12b.png";
 
 const ServicesSection = () => {
   const [activeService, setActiveService] = useState(null);
@@ -21,61 +34,78 @@ const ServicesSection = () => {
   const services = [
     {
       title: "Graphic Designing",
-      icon: icon1,
+      iconA: icon1a,
+      iconB: icon1b,
       path: "/services/graphic-designing",
     },
-    { title: "UI/UX Design", icon: icon2, path: "/services/ui-ux-design" },
+    {
+      title: "UI/UX Design",
+      iconA: icon2a,
+      iconB: icon2b,
+      path: "/services/ui-ux-design",
+    },
     {
       title: "E-Learning Training Courses",
-      icon: icon3,
+      iconA: icon3a,
+      iconB: icon3b,
       path: "/services/e-learning-training-courses",
     },
     {
       title: "Desktop Publication",
-      icon: icon4,
+      iconA: icon4a,
+      iconB: icon4b,
       path: "/services/desktop-publication",
     },
     {
       title: "Web & App Development",
-      icon: icon5,
+      iconA: icon5a,
+      iconB: icon5b,
       path: "/services/web-app-development",
     },
     {
       title: "E-Learning Training Videos",
-      icon: icon6,
+      iconA: icon6a,
+      iconB: icon6b,
       path: "/services/e-learning-training-videos",
     },
     {
       title: "Illustration Design",
-      icon: icon7,
+      iconA: icon7a,
+      iconB: icon7b,
       path: "/services/illustration-design",
     },
     {
       title: "Search Engine Optimization",
-      icon: icon8,
+      iconA: icon8a,
+      iconB: icon8b,
       path: "/services/search-engine-optimization",
     },
     {
       title: "Documentary Videos",
-      icon: icon9,
+      iconA: icon9a,
+      iconB: icon9b,
       path: "/services/documentary-videos",
     },
     {
       title: "Printing Publication",
-      icon: icon10,
+      iconA: icon10a,
+      iconB: icon10b,
       path: "/services/printing-publication",
     },
     {
       title: "E-Commerce Store Services",
-      icon: icon11,
+      iconA: icon11a,
+      iconB: icon11b,
       path: "/services/ecommerce-store-services",
     },
     {
       title: "Illustrations Videos",
-      icon: icon12,
+      iconA: icon12a,
+      iconB: icon12b,
       path: "/services/illustrations-videos",
     },
   ];
+  
 
   return (
     <section className="bg-[#101010] border-t border-b border-[#434343] pt-3 sm:pt-10 pb-5 sm:pb-20">
@@ -104,11 +134,19 @@ const ServicesSection = () => {
 
               {/* Content */}
               <div className="relative z-10 flex items-center gap-4 group-hover:text-white transition-colors duration-300">
-                <img
-                  src={service.icon}
-                  alt={service.title}
-                  className="w-10 sm:w-16 h-10 sm:h-16"
-                />
+                <div className="relative w-10 sm:w-16 h-10 sm:h-16">
+                  <img
+                    src={service.iconA}
+                    alt={service.title}
+                    className="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+                  />
+                  <img
+                    src={service.iconB}
+                    alt={service.title}
+                    className="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                  />
+                </div>
+
                 <span className="font-medium text-sm sm:text-lg text-start">
                   {service.title}
                 </span>

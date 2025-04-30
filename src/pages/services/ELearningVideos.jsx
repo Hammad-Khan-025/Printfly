@@ -46,6 +46,63 @@ const ELearningVideos = () => {
     [img6a, img6b, img6c], 
   ];
 
+  const gridItems = [
+    {
+      type: "slider",
+      images: sliderImages[0],
+    },
+    {
+      type: "text",
+      title: "Custom Training Video Production:",
+      content: `Fully tailored videos designed to match your course goals, brand style, and learner needs.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[1],
+    },
+    {
+      type: "text",
+      title: "Animated Explainer Videos:",
+      content: `2D/3D animations, whiteboard animations, and motion graphics to visualize concepts in an engaging way.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[2],
+    },
+    {
+      type: "text",
+      title: "Interactive Video Learning:",
+      content: `Videos with clickable elements, quizzes, and scenario-based decision points to enhance active learning.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[3],
+    },
+    {
+      type: "text",
+      title: "Instructor-Led Training (ILT) Videos:",
+      content: `Professionally filmed lectures, tutorials, and demonstrations led by subject-matter experts.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[4],
+    },
+    {
+      type: "text",
+      title: "Voice over and Narration Services:",
+      content: `Professional voice artists to deliver clear, engaging, and friendly narration tailored to your audience.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[5],
+    },
+    {
+      type: "text",
+      title: "Video Editing and Post-Production:",
+      content: `High-quality editing, motion graphics, captioning, and branding to create polished final videos.`,
+    },
+  ];
+
   const images = [slider1, slider2, slider3, slider4, slider5];
   return (
     <article>
@@ -53,32 +110,10 @@ const ELearningVideos = () => {
         logo={logo}
         bgImage={bgImage}
         title="E-Learning Training Videos"
-        description={
-          <>
-            Graphic design is the art of{" "}
-            <span className="text-[#E9204F]">visually communicating</span> ideas
-            through typography, imagery, and layout.
-          </>
-        }
-        aboutTitle="WHAT IS E-Learning Training Videos?"
-        aboutPara1={
-          <>
-            Graphic design is the art of visual communication using{" "}
-            <span className="text-[#E9204F]">
-              images, typography, and colors to convey messages.
-            </span>
-            <br />
-            It plays a key role in branding, marketing, and storytelling across
-            various industries.
-          </>
-        }
-        aboutPara2="Graphic design is a multidisciplinary field that combines art and technology to communicate ideas through visual content. It involves creating and combining symbols, images, and text to form visual representations of messages and concepts. Here's a comprehensive description of graphic design, encompassing its core elements, tools, and applications:"
-        img1={sliderImages[0]} 
-        img2={sliderImages[1]} 
-        img3={sliderImages[2]} 
-        img4={sliderImages[3]} 
-        img5={sliderImages[4]} 
-        img6={sliderImages[5]} 
+        aboutPara1="At Print Fly Communications, we specialize in creating dynamic e-learning videos that make complex topics simple, memorable, and easy to understand."
+
+        aboutPara2="From corporate training to academic learning and professional certifications, our training videos combine instructional expertise with visual storytelling to maximize learner engagement and retention"
+        gridItems={gridItems} 
       />
 
       {/* client work section */}

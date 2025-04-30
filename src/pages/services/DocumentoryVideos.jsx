@@ -46,6 +46,63 @@ const DocumentoryVideos = () => {
     [img6a, img6b, img6c], 
   ];
 
+  const gridItems = [
+    {
+      type: "slider",
+      images: sliderImages[0],
+    },
+    {
+      type: "text",
+      title: "Concept Development and Scripting:",
+      content: `Crafting strong narratives with clear messaging that aligns with your goals and vision.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[1],
+    },
+    {
+      type: "text",
+      title: "Full-Service Production:",
+      content: `Professional filming, lighting, and sound recording — on-location or in-studio — to capture the highest quality visuals and audio.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[2],
+    },
+    {
+      type: "text",
+      title: "Interviews and Storytelling:",
+      content: `Capturing real voices, testimonials, and candid moments to add depth and authenticity to your documentary.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[3],
+    },
+    {
+      type: "text",
+      title: "Editing and Post-Production:",
+      content: `Expert editing, color correction, sound mixing, motion graphics, and visual effects to create a polished, cinematic final product.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[4],
+    },
+    {
+      type: "text",
+      title: "Voiceover and Music Scoring:",
+      content: `Adding emotional resonance through professional narration and custom or licensed music.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[5],
+    },
+    {
+      type: "text",
+      title: "Short-Form and Long-Form Documentaries:",
+      content: `From 2-minute brand stories to 60-minute in-depth documentaries — we tailor the length to your audience and platform.`,
+    },
+  ];
+
   const images = [slider1, slider2, slider3, slider4, slider5];
   return (
     <article>
@@ -53,32 +110,10 @@ const DocumentoryVideos = () => {
         logo={logo}
         bgImage={bgImage}
         title="Documentory Videos"
-        description={
-          <>
-            Graphic design is the art of{" "}
-            <span className="text-[#E9204F]">visually communicating</span> ideas
-            through typography, imagery, and layout.
-          </>
-        }
-        aboutTitle="WHAT IS Documentory Videos?"
-        aboutPara1={
-          <>
-            Graphic design is the art of visual communication using{" "}
-            <span className="text-[#E9204F]">
-              images, typography, and colors to convey messages.
-            </span>
-            <br />
-            It plays a key role in branding, marketing, and storytelling across
-            various industries.
-          </>
-        }
-        aboutPara2="Graphic design is a multidisciplinary field that combines art and technology to communicate ideas through visual content. It involves creating and combining symbols, images, and text to form visual representations of messages and concepts. Here's a comprehensive description of graphic design, encompassing its core elements, tools, and applications:"
-        img1={sliderImages[0]} 
-        img2={sliderImages[1]} 
-        img3={sliderImages[2]} 
-        img4={sliderImages[3]} 
-        img5={sliderImages[4]} 
-        img6={sliderImages[5]} 
+        aboutPara1="At Print Fly Communications, we specialize in producing compelling documentary videos that capture authentic stories, real emotions, and meaningful moments."
+
+        aboutPara2="Whether it’s telling the story of a brand, highlighting a cause, or documenting a journey, we create cinematic documentaries that engage audiences, inspire action, and leave a lasting impression."
+        gridItems={gridItems} 
       />
 
       {/* client work section */}

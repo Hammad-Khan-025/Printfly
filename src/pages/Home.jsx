@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import clientImage from "../assets/home-images/work-images/client-image.png";
-import icon1 from "../assets/home-images/services-images/icon1.png";
-import icon2 from "../assets/home-images/services-images/icon2.png";
-import icon3 from "../assets/home-images/services-images/icon3.png";
-import icon4 from "../assets/home-images/services-images/icon4.png";
-import icon5 from "../assets/home-images/services-images/icon5.png";
-import icon6 from "../assets/home-images/services-images/icon6.png";
-import icon7 from "../assets/home-images/services-images/icon7.png";
-import icon8 from "../assets/home-images/services-images/icon8.png";
-import icon9 from "../assets/home-images/services-images/icon9.png";
-import icon10 from "../assets/home-images/services-images/icon10.png";
-import icon11 from "../assets/home-images/services-images/icon11.png";
-import icon12 from "../assets/home-images/services-images/icon12.png";
+import icon1a from "../assets/home-images/services-images/icon1a.png";
+import icon2a from "../assets/home-images/services-images/icon2a.png";
+import icon3a from "../assets/home-images/services-images/icon3a.png";
+import icon4a from "../assets/home-images/services-images/icon4a.png";
+import icon5a from "../assets/home-images/services-images/icon5a.png";
+import icon6a from "../assets/home-images/services-images/icon6a.png";
+import icon7a from "../assets/home-images/services-images/icon7a.png";
+import icon8a from "../assets/home-images/services-images/icon8a.png";
+import icon9a from "../assets/home-images/services-images/icon9a.png";
+import icon10a from "../assets/home-images/services-images/icon10a.png";
+import icon11a from "../assets/home-images/services-images/icon11a.png";
+import icon12a from "../assets/home-images/services-images/icon12a.png";
 
 import workSlider1 from "../assets/home-images/work-images/slider1.png";
 import workSlider2 from "../assets/home-images/work-images/slider2.png";
@@ -32,18 +32,18 @@ import ImagesSlider from "../components/ImagesSlider";
 
 const Home = () => {
   const services = [
-    { title: "Graphic Designing", icon: icon1 },
-    { title: "UI/UX Design", icon: icon2 },
-    { title: "E-Learning Training Courses", icon: icon3 },
-    { title: "Desktop Publication", icon: icon4 },
-    { title: "Web & App Development", icon: icon5 },
-    { title: "E-Learning Training Videos", icon: icon6 },
-    { title: "Illustration Design", icon: icon7 },
-    { title: "Search Engine Optimization", icon: icon8 },
-    { title: "Documentary Videos", icon: icon9 },
-    { title: "Printing Publication", icon: icon10 },
-    { title: "E-Commerce Store Services", icon: icon11 },
-    { title: "Illustrations Videos", icon: icon12 },
+    { title: "Graphic Designing", icon: icon1a },
+    { title: "UI/UX Design", icon: icon2a },
+    { title: "E-Learning Training Courses", icon: icon3a },
+    { title: "Desktop Publication", icon: icon4a },
+    { title: "Web & App Development", icon: icon5a },
+    { title: "E-Learning Training Videos", icon: icon6a },
+    { title: "Illustration Design", icon: icon7a },
+    { title: "Search Engine Optimization", icon: icon8a },
+    { title: "Documentary Videos", icon: icon9a },
+    { title: "Printing Publication", icon: icon10a },
+    { title: "E-Commerce Store Services", icon: icon11a },
+    { title: "Illustrations Videos", icon: icon12a },
   ];
 
   const workSliderImages = [workSlider1, workSlider2, workSlider3, workSlider4, workSlider5];

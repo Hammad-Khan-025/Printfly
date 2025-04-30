@@ -46,39 +46,74 @@ const WebAndApp = () => {
     [img6a, img6b, img6c], 
   ];
 
+  const gridItems = [
+    {
+      type: "slider",
+      images: sliderImages[0],
+    },
+    {
+      type: "text",
+      title: "Custom Website Development:",
+      content: `Responsive, SEO-friendly websites built to represent your brand and drive results.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[1],
+    },
+    {
+      type: "text",
+      title: "E-Commerce Development:",
+      content: `Scalable, secure online stores that offer smooth shopping experiences and boost sales.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[2],
+    },
+    {
+      type: "text",
+      title: "Web Application Development:",
+      content: `Complex, dynamic applications built for speed, functionality, and user engagement.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[3],
+    },
+    {
+      type: "text",
+      title: "Mobile App Development:",
+      content: `Native and cross-platform apps (iOS and Android) designed to deliver top performance and usability.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[4],
+    },
+    {
+      type: "text",
+      title: "Content Management Systems (CMS):",
+      content: `Easy-to-manage websites powered by platforms like WordPress, Webflow, Shopify, and custom solutions.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[5],
+    },
+    {
+      type: "text",
+      title: "Maintenance & Support:",
+      content: `Ongoing updates, security monitoring, and performance optimization for all your digital products.`,
+    },
+  ];
+
   const images = [slider1, slider2, slider3, slider4, slider5];
   return (
     <article>
       <SingleService
         logo={logo}
-        bgImage={bgImage}
+        // bgImage={bgImage}
         title="web and app development"
-        description={
-          <>
-            Graphic design is the art of{" "}
-            <span className="text-[#E9204F]">visually communicating</span> ideas
-            through typography, imagery, and layout.
-          </>
-        }
-        aboutTitle="WHAT IS web and app development?"
-        aboutPara1={
-          <>
-            Graphic design is the art of visual communication using{" "}
-            <span className="text-[#E9204F]">
-              images, typography, and colors to convey messages.
-            </span>
-            <br />
-            It plays a key role in branding, marketing, and storytelling across
-            various industries.
-          </>
-        }
-        aboutPara2="Graphic design is a multidisciplinary field that combines art and technology to communicate ideas through visual content. It involves creating and combining symbols, images, and text to form visual representations of messages and concepts. Here's a comprehensive description of graphic design, encompassing its core elements, tools, and applications:"
-        img1={sliderImages[0]} 
-        img2={sliderImages[1]} 
-        img3={sliderImages[2]} 
-        img4={sliderImages[3]} 
-        img5={sliderImages[4]} 
-        img6={sliderImages[5]} 
+        aboutPara1="At Print Fly Communications, we specialize in custom web and mobile app development that transforms ideas into seamless, scalable digital experiences. Whether you need a marketing website, a full-scale web application, or a feature-rich mobile app, we deliver high-performance solutions tailored to your goals."
+
+        aboutPara2="Your website or app isn’t just a project - it’s your brand’s gateway to the world. We help you create smart, powerful, and beautiful digital solutions that deliver real results."
+        gridItems={gridItems}
       />
 
       {/* client work section */}

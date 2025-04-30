@@ -46,39 +46,74 @@ const ECommerceStore = () => {
     [img6a, img6b, img6c], 
   ];
 
+  const gridItems = [
+    {
+      type: "slider",
+      images: sliderImages[0],
+    },
+    {
+      type: "text",
+      title: "Custom E-commerce Website Development:",
+      content: `Fully tailored online stores with responsive design, optimized for all devices.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[1],
+    },
+    {
+      type: "text",
+      title: "Platform Expertise:",
+      content: `Shopify, WooCommerce, Magento, Big Commerce, Wix, Squarespace, and custom-built platforms.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[2],
+    },
+    {
+      type: "text",
+      title: "Product Management and Catalog Setup: ",
+      content: `Seamless organization of your products, categories, pricing, inventory, and more.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[3],
+    },
+    {
+      type: "text",
+      title: "Payment Gateway Integration:",
+      content: `Secure, flexible payment solutions including PayPal, Stripe, Square, and others.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[4],
+    },
+    {
+      type: "text",
+      title: "Mobile-Optimized Shopping Experiences:",
+      content: `Fast, easy-to-navigate stores that look great and perform well on any device.`,
+    },
+    {
+      type: "slider",
+      images: sliderImages[5],
+    },
+    {
+      type: "text",
+      title: "Ongoing Support and Maintenance:",
+      content: `Continuous updates, security checks, and performance enhancements to keep your store at its best.`,
+    },
+  ];
+
   const images = [slider1, slider2, slider3, slider4, slider5];
   return (
     <article>
       <SingleService
         logo={logo}
-        bgImage={bgImage}
+        // bgImage={bgImage}
         title="E-Commerce Store services"
-        description={
-          <>
-            Graphic design is the art of{" "}
-            <span className="text-[#E9204F]">visually communicating</span> ideas
-            through typography, imagery, and layout.
-          </>
-        }
-        aboutTitle="WHAT IS E-Commerce Store services?"
-        aboutPara1={
-          <>
-            Graphic design is the art of visual communication using{" "}
-            <span className="text-[#E9204F]">
-              images, typography, and colors to convey messages.
-            </span>
-            <br />
-            It plays a key role in branding, marketing, and storytelling across
-            various industries.
-          </>
-        }
-        aboutPara2="Graphic design is a multidisciplinary field that combines art and technology to communicate ideas through visual content. It involves creating and combining symbols, images, and text to form visual representations of messages and concepts. Here's a comprehensive description of graphic design, encompassing its core elements, tools, and applications:"
-        img1={sliderImages[0]} 
-        img2={sliderImages[1]} 
-        img3={sliderImages[2]} 
-        img4={sliderImages[3]} 
-        img5={sliderImages[4]} 
-        img6={sliderImages[5]} 
+        aboutPara1="At Print Fly Communications, we design and develop powerful e-commerce stores that not only look stunning but are built to convert visitors into loyal customers."
+
+        aboutPara2="Your e-commerce store is your brand’s virtual showroom. We help you build a professional, easy-to-manage, and conversion-optimized online store that attracts, engages, and sells - 24/7."
+        gridItems={gridItems}
       />
 
       {/* client work section */}
