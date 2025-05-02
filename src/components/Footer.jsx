@@ -13,25 +13,25 @@ const Footer = () => {
             <div className="flex justify-center md:justify-start gap-6 mb-4">
               <a
                 href="#"
-                className="text-2xl sm:text-3xl py-1 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
+                className="text-2xl sm:text-3xl py-1.5 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
               >
                 <FaFacebookSquare />
               </a>
               <a
                 href="#"
-                className="text-2xl sm:text-3xl py-1 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
+                className="text-2xl sm:text-3xl py-1.5 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
               >
                 <FaInstagramSquare />
               </a>
               <a
                 href="#"
-                className="text-2xl sm:text-3xl py-1 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
+                className="text-2xl sm:text-3xl py-1.5 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
               >
                 <FaLinkedin />
               </a>
               <a
                 href="#"
-                className="text-2xl sm:text-3xl py-1 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
+                className="text-2xl sm:text-3xl py-1.5 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
               >
                 <FaWhatsappSquare />
               </a>

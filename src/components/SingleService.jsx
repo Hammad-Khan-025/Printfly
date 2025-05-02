@@ -12,39 +12,37 @@ const SingleService = ({
 
   const MiniSlider = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-
+  
     useEffect(() => {
       const interval = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
       }, 3000);
       return () => clearInterval(interval);
     }, [images.length]);
-
+  
     return (
-      <div className="relative w-full h-full overflow-hidden">
+      <div className="relative w-full h-full overflow-hidden perspective-1000">
         {images.map((img, idx) => {
           const isCurrent = idx === currentIndex;
-          const isPrevious =
-            idx === (currentIndex - 1 + images.length) % images.length;
-
           return (
-            <img
+            <div
               key={idx}
-              src={img}
-              alt={`Slide ${idx}`}
-              className={`absolute top-0 left-0 w-full h-full object-cover transition-transform duration-700 ease-in-out ${
-                isCurrent
-                  ? "translate-y-0 z-20"
-                  : isPrevious
-                  ? "translate-y-full z-10"
-                  : "-translate-y-full z-0"
+              className={`absolute inset-0 w-full h-full transition-transform duration-700 ease-in-out transform-style-preserve-3d ${
+                isCurrent ? "rotate-y-0 z-20" : "rotate-y-180 z-10"
               }`}
-            />
+            >
+              <img
+                src={img}
+                alt={`Slide ${idx}`}
+                className="w-full h-full object-cover backface-hidden"
+              />
+            </div>
           );
         })}
       </div>
     );
   };
+  
 
   return (
     <section>
