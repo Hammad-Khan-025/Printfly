@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import clientImage from "../assets/home-images/work-images/client-image.png";
+import clientImage from "../assets/home-images/work-images/client-image.jpg";
 import icon1a from "../assets/home-images/services-images/icon1a.png";
 import icon2a from "../assets/home-images/services-images/icon2a.png";
 import icon3a from "../assets/home-images/services-images/icon3a.png";
@@ -13,17 +13,17 @@ import icon10a from "../assets/home-images/services-images/icon10a.png";
 import icon11a from "../assets/home-images/services-images/icon11a.png";
 import icon12a from "../assets/home-images/services-images/icon12a.png";
 
-import workSlider1 from "../assets/home-images/work-images/slider1.png";
-import workSlider2 from "../assets/home-images/work-images/slider2.png";
-import workSlider3 from "../assets/home-images/work-images/slider3.png";
-import workSlider4 from "../assets/home-images/work-images/slider4.png";
-import workSlider5 from "../assets/home-images/work-images/slider5.png";
+import workSlider1 from "../assets/home-images/work-images/slider1.jpg";
+import workSlider2 from "../assets/home-images/work-images/slider2.jpg";
+import workSlider3 from "../assets/home-images/work-images/slider3.jpg";
+import workSlider4 from "../assets/home-images/work-images/slider4.jpg";
+import workSlider5 from "../assets/home-images/work-images/slider5.jpg";
 
-import blogSlider1 from "../assets/home-images/blog-images/slider1.png";
-import blogSlider2 from "../assets/home-images/blog-images/slider2.png";
-import blogSlider3 from "../assets/home-images/blog-images/slider3.png";
-import blogSlider4 from "../assets/home-images/blog-images/slider4.png";
-import blogSlider5 from "../assets/home-images/blog-images/slider5.png";
+import blogSlider1 from "../assets/home-images/blog-images/slider1.jpg";
+import blogSlider2 from "../assets/home-images/blog-images/slider2.jpg";
+import blogSlider3 from "../assets/home-images/blog-images/slider3.jpg";
+import blogSlider4 from "../assets/home-images/blog-images/slider4.jpg";
+import blogSlider5 from "../assets/home-images/blog-images/slider5.jpg";
 
 import LogoSlider from "../components/LogoSlider";
 import HeroSection from "../components/HeroSection";
@@ -71,7 +71,7 @@ const Home = () => {
       {/* Clients Section */}
       <section id="clients" className="py-12 sm:py-16">
         <div className="flex flex-col sm:flex-row justify-center items-center text-center gap-10 sm:gap-20 mx-5">
-          <img src={clientImage} alt="" />
+          <img src={clientImage} alt="" className="sm:max-w-[30rem]" />
           <div>
             <h1 className="text-[#B2B1B1] text-2xl sm:text-4xl">WHAT CLIENT SAY.</h1>
             <h2 className="text-[#E9204F] mt-3">from all over the world </h2>

@@ -2,35 +2,35 @@ import React from "react";
 import bgImage from "../../assets/home-images/services-images/e-learning-videos/bgImage.png";
 import logo from "../../assets/home-images/services-images/e-learning-videos/logo.png";
 
-import img1a from "../../assets/home-images/services-images/e-learning-videos/img1/img1a.png";
-import img1b from "../../assets/home-images/services-images/e-learning-videos/img1/img1b.png";
-import img1c from "../../assets/home-images/services-images/e-learning-videos/img1/img1c.png";
+import img1a from "../../assets/home-images/services-images/e-learning-videos/img1/img1a.jpg";
+import img1b from "../../assets/home-images/services-images/e-learning-videos/img1/img1b.jpg";
+import img1c from "../../assets/home-images/services-images/e-learning-videos/img1/img1c.jpg";
 
-import img2a from "../../assets/home-images/services-images/e-learning-videos/img2/img2a.png";
-import img2b from "../../assets/home-images/services-images/e-learning-videos/img2/img2b.png";
-import img2c from "../../assets/home-images/services-images/e-learning-videos/img2/img2c.png";
+import img2a from "../../assets/home-images/services-images/e-learning-videos/img2/img2a.jpg";
+import img2b from "../../assets/home-images/services-images/e-learning-videos/img2/img2b.jpg";
+import img2c from "../../assets/home-images/services-images/e-learning-videos/img2/img2c.jpg";
 
-import img3a from "../../assets/home-images/services-images/e-learning-videos/img3/img3a.png";
-import img3b from "../../assets/home-images/services-images/e-learning-videos/img3/img3b.png";
-import img3c from "../../assets/home-images/services-images/e-learning-videos/img3/img3c.png";
+import img3a from "../../assets/home-images/services-images/e-learning-videos/img3/img3a.jpg";
+import img3b from "../../assets/home-images/services-images/e-learning-videos/img3/img3b.jpg";
+import img3c from "../../assets/home-images/services-images/e-learning-videos/img3/img3c.jpg";
 
-import img4a from "../../assets/home-images/services-images/e-learning-videos/img4/img4a.png";
-import img4b from "../../assets/home-images/services-images/e-learning-videos/img4/img4b.png";
-import img4c from "../../assets/home-images/services-images/e-learning-videos/img4/img4c.png";
+import img4a from "../../assets/home-images/services-images/e-learning-videos/img4/img4a.jpg";
+import img4b from "../../assets/home-images/services-images/e-learning-videos/img4/img4b.jpg";
+import img4c from "../../assets/home-images/services-images/e-learning-videos/img4/img4c.jpg";
 
-import img5a from "../../assets/home-images/services-images/e-learning-videos/img5/img5a.png";
-import img5b from "../../assets/home-images/services-images/e-learning-videos/img5/img5b.png";
-import img5c from "../../assets/home-images/services-images/e-learning-videos/img5/img5c.png";
+import img5a from "../../assets/home-images/services-images/e-learning-videos/img5/img5a.jpg";
+import img5b from "../../assets/home-images/services-images/e-learning-videos/img5/img5b.jpg";
+import img5c from "../../assets/home-images/services-images/e-learning-videos/img5/img5c.jpg";
 
-import img6a from "../../assets/home-images/services-images/e-learning-videos/img6//img6a.png";
-import img6b from "../../assets/home-images/services-images/e-learning-videos/img6//img6b.png";
-import img6c from "../../assets/home-images/services-images/e-learning-videos/img6//img6c.png";
+import img6a from "../../assets/home-images/services-images/e-learning-videos/img6//img6a.jpg";
+import img6b from "../../assets/home-images/services-images/e-learning-videos/img6//img6b.jpg";
+import img6c from "../../assets/home-images/services-images/e-learning-videos/img6//img6c.jpg";
 
-import slider1 from "../../assets/home-images/services-images/e-learning-videos/slider1.png";
-import slider2 from "../../assets/home-images/services-images/e-learning-videos/slider2.png";
-import slider3 from "../../assets/home-images/services-images/e-learning-videos/slider3.png";
-import slider4 from "../../assets/home-images/services-images/e-learning-videos/slider4.png";
-import slider5 from "../../assets/home-images/services-images/e-learning-videos/slider5.png";
+import slider1 from "../../assets/home-images/services-images/e-learning-videos/slider1.jpg";
+import slider2 from "../../assets/home-images/services-images/e-learning-videos/slider2.jpg";
+import slider3 from "../../assets/home-images/services-images/e-learning-videos/slider3.jpg";
+import slider4 from "../../assets/home-images/services-images/e-learning-videos/slider4.jpg";
+import slider5 from "../../assets/home-images/services-images/e-learning-videos/slider5.jpg";
 
 import SingleService from "../../components/SingleService";
 import ImagesSlider from "../../components/ImagesSlider";
