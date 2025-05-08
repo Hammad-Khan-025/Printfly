@@ -1,5 +1,10 @@
-import React from 'react'
-import { FaFacebookSquare, FaInstagramSquare, FaLinkedin, FaWhatsappSquare } from "react-icons/fa";
+import React from "react";
+import {
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaLinkedin,
+  FaWhatsappSquare,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -12,25 +17,33 @@ const Footer = () => {
           <div className="flex flex-col items-start md:items-end gap-4 text-[#DAD9D9] px-6">
             <div className="flex justify-center md:justify-start gap-6 mb-4">
               <a
-                href="#"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-2xl sm:text-3xl py-1.5 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
               >
                 <FaFacebookSquare />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-2xl sm:text-3xl py-1.5 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
               >
                 <FaInstagramSquare />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-2xl sm:text-3xl py-1.5 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
               >
                 <FaLinkedin />
               </a>
               <a
-                href="#"
+                href="https://wa.me/923458507835"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-2xl sm:text-3xl py-1.5 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
               >
                 <FaWhatsappSquare />
@@ -101,6 +114,6 @@ const Footer = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Footer;

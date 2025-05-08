@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
 const ImagesSlide = ({ images, title, para }) => {
   const [startIndex, setStartIndex] = useState(0);
-  const [itemsPerView, setItemsPerView] = useState(1); 
+  const [itemsPerView, setItemsPerView] = useState(1);
 
   useEffect(() => {
     const updateItemsPerView = () => {
@@ -18,7 +19,7 @@ const ImagesSlide = ({ images, title, para }) => {
     };
 
     updateItemsPerView(); // Initial check
-    window.addEventListener("resize", updateItemsPerView); 
+    window.addEventListener("resize", updateItemsPerView);
 
     return () => window.removeEventListener("resize", updateItemsPerView);
   }, []);
@@ -27,9 +28,9 @@ const ImagesSlide = ({ images, title, para }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setStartIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); 
+    }, 3000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, [images.length]);
 
   const handleNext = () => {
@@ -50,30 +51,58 @@ const ImagesSlide = ({ images, title, para }) => {
   return (
     <>
       <div className="text-center mb-10 sm:mb-16">
-        <h2 className="text-2xl sm:text-4xl text-[#B2B1B1] tracking-wide">{title}</h2>
+        <h2 className="text-2xl sm:text-4xl text-[#B2B1B1] tracking-wide">
+          {title}
+        </h2>
         <p className="text-[#E9204F] mt-2 text-sm sm:text-base">{para}</p>
         <div className="w-66 h-[1px] mt-4 mx-auto bg-[#E9204F] rounded-full"></div>
       </div>
       <div className="relative">
-        <div className="flex overflow-hidden items-center gap-5 px-5">
-          {visibleImages.map((image, index) => (
-            <div
-              key={index}
-              className={`flex-shrink-0 w-full transition-transform duration-300 ${
-                itemsPerView === 2
-                  ? "sm:w-1/2"
-                  : itemsPerView === 3
-                  ? "lg:w-1/3 sm:w-1/2"
-                  : "w-full"
-              }`}
-            >
-              <img
-                src={image}
-                alt={`Slide ${index}`}
-                className="w-full h-64 sm:h-72 object-cover"
-              />
-            </div>
-          ))}
+        <div className="flex overflow-hidden gap-5 px-5">
+        {visibleImages.map((image, index) => {
+  const Wrapper = image.buttonLink ? Link : "div";
+  const wrapperProps = image.buttonLink ? { to: image.buttonLink, className: "block group" } : { className: "group" };
+
+  return (
+    <div
+      key={index}
+      className={`flex-shrink-0 w-full transition-transform duration-300 ${
+        itemsPerView === 2
+          ? "sm:w-1/2"
+          : itemsPerView === 3
+          ? "lg:w-1/3 sm:w-1/2"
+          : "w-full"
+      }`}
+    >
+      <Wrapper {...wrapperProps}>
+        <div className="overflow-hidden">
+          <img
+            src={image.src || image}
+            alt={`Slide ${index}`}
+            className="w-full h-64 sm:h-72 object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+          />
+        </div>
+
+        {image.description || image.buttonText ? (
+                <div className="mt-4 ">
+                  {image.description && (
+                    <p className="text-sm text-[#DBDBDB] mb-4">
+                      {image.description}
+                    </p>
+                  )}
+                  {image.buttonText && (
+                    <p
+                      className="inline-block text-[#E9204F] border-b border-b-gray-700 hover:border-b-[#c71a43] transition"
+                    >
+                      {image.buttonText}
+                    </p>
+                  )}
+                </div>
+        ) : null}
+      </Wrapper>
+    </div>
+  );
+})}
         </div>
 
         {/* Arrows for sm+ screens (absolute left/right) */}

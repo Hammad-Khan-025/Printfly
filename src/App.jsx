@@ -15,6 +15,7 @@ import DocumentoryVideos from "./pages/services/DocumentoryVideos";
 import PrintingPublication from "./pages/services/PrintingPublication";
 import ECommerceStore from "./pages/services/ECommerceStore";
 import IllustrationVideos from "./pages/services/IllustrationVideos";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/blogs" element={<Blog />} />
           <Route path="/services/graphic-designing" element={<GraphicDesign />} />
           <Route path="/services/ui-ux-design" element={<UIUXDesign />} />
           <Route path="/services/e-learning-training-courses" element={<ELearningCourses />} />

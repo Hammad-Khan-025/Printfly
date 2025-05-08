@@ -46,8 +46,46 @@ const Home = () => {
     { title: "Illustrations Videos", icon: icon12a },
   ];
 
-  const workSliderImages = [workSlider1, workSlider2, workSlider3, workSlider4, workSlider5];
-  const blogSliderImages = [blogSlider1, blogSlider2, blogSlider3, blogSlider4, blogSlider5];
+  const workSliderImages = [
+    workSlider1,
+    workSlider2,
+    workSlider3,
+    workSlider4,
+    workSlider5,
+  ];
+  
+  const blogSliderImages = [
+    {
+      src: blogSlider1,
+      description: "FESPA 2025 events to unite visionaries across and beyond Print, Signage and Personalisation",
+      buttonText: "Continue Reading",
+      buttonLink: "/blogs",
+    },
+    {
+      src: blogSlider2,
+      description: "FESPA 2025 events to unite visionaries across and beyond Print, Signage and Personalisation",
+      buttonText: "Continue Reading",
+      buttonLink: "/blogs",
+    },
+    {
+      src: blogSlider3,
+      description: "FESPA 2025 events to unite visionaries across and beyond Print, Signage and Personalisation",
+      buttonText: "Continue Reading",
+      buttonLink: "/blogs",
+    },
+    {
+      src: blogSlider4,
+      description: "FESPA 2025 events to unite visionaries across and beyond Print, Signage and Personalisation",
+      buttonText: "Continue Reading",
+      buttonLink: "/blogs",
+    },
+    {
+      src: blogSlider5,
+      description: "FESPA 2025 events to unite visionaries across and beyond Print, Signage and Personalisation",
+      buttonText: "Continue Reading",
+      buttonLink: "/blogs",
+    },
+  ];  
 
   return (
     <article className="pt-20">
@@ -63,7 +101,11 @@ const Home = () => {
 
       {/* Work Section */}
       <section id="work" className="max-w-screen-xl mx-auto py-14">
-        <ImagesSlider images={workSliderImages} title='WORK' para='things we’ve made' /> 
+        <ImagesSlider
+          images={workSliderImages}
+          title="WORK"
+          para="things we’ve made"
+        />
       </section>
 
       <div className="w-full h-[1px] mt-4 mx-auto bg-[#434343] rounded-full"></div>
@@ -71,30 +113,42 @@ const Home = () => {
       {/* Clients Section */}
       <section id="clients" className="py-12 sm:py-16">
         <div className="flex flex-col sm:flex-row justify-center items-center text-center gap-10 sm:gap-20 mx-5">
-          <img src={clientImage} alt="" className="sm:max-w-[30rem]" />
+          <div className="sm:max-w-[30rem] overflow-hidden">
+            <img
+              src={clientImage}
+              alt=""
+              className="w-full h-auto object-cover filter grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
+            />
+          </div>
           <div>
-            <h1 className="text-[#B2B1B1] text-2xl sm:text-4xl">WHAT CLIENT SAY.</h1>
+            <h1 className="text-[#B2B1B1] text-2xl sm:text-4xl">
+              WHAT CLIENT SAY.
+            </h1>
             <h2 className="text-[#E9204F] mt-3">from all over the world </h2>
             <div className="w-full h-[1px] mt-3 mx-auto bg-[#E9204F] rounded-full"></div>
             <p className="text-[#535252] max-w-[23rem] mt-3">
-              Client testimonials are a crucial part of a digital agency's branding and marketing strategy.
-              They provide social proof and help build trust with potential clients.
+              Client testimonials are a crucial part of a digital agency's
+              branding and marketing strategy. They provide social proof and
+              help build trust with potential clients.
             </p>
           </div>
         </div>
-          <LogoSlider />
+        <LogoSlider />
       </section>
 
       <div className="w-full h-[1px] mt-4 mx-auto bg-[#434343] rounded-full"></div>
 
       {/* Blogs Section */}
       <section id="blogs" className="max-w-screen-xl mx-auto py-14">
-        <ImagesSlider images={blogSliderImages} title='LATEST NEWS & BLOGS' para='check out some of our thinking' />
+        <ImagesSlider
+          images={blogSliderImages}
+          title="LATEST NEWS & BLOGS"
+          para="check out some of our thinking"
+        />
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="">
-      </section>
+      <section id="contact" className=""></section>
     </article>
   );
 };

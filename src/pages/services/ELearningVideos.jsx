@@ -116,15 +116,6 @@ const ELearningVideos = () => {
         gridItems={gridItems} 
       />
 
-      {/* client work section */}
-      <div className="w-full h-[1px] bg-[#434343]"></div>
-      <div className="py-10 sm:py-16 max-w-screen-xl mx-auto">
-        <ImagesSlider
-          images={images}
-          title="CLIENT WORK"
-          para="things we’ve made"
-        />
-      </div>
     </article>
   );
 };

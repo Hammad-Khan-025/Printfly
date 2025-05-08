@@ -62,9 +62,6 @@ const SingleService = ({
             <h1 className="text-xl sm:text-4xl tracking-wide mb-2 uppercase">
               {title}
             </h1>
-            <p className=" max-w-[22rem] text-xs font-glegoo leading-6">
-              {description}
-            </p>
           </div>
         </div>
       </div>
@@ -76,7 +73,7 @@ const SingleService = ({
           <p className="text-[#B2B1B1] text-sm sm:text-xl py-5 leading-7 sm:leading-10 font-glegoo">
             {aboutPara1}
           </p>
-          <div className="text-[#555454] text-lg sm:text-3xl leading-7 sm:leading-14 mt-6 sm:mt-10">
+          <div className="text-[#E9204F] text-lg sm:text-2xl leading-7 sm:leading-14 mt-6 sm:mt-10">
             {aboutPara2
               .split(".")
               .filter((sentence) => sentence.trim() !== "")
