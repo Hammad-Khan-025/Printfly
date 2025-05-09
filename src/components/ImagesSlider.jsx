@@ -59,50 +59,50 @@ const ImagesSlide = ({ images, title, para }) => {
       </div>
       <div className="relative">
         <div className="flex overflow-hidden gap-5 px-5">
-        {visibleImages.map((image, index) => {
-  const Wrapper = image.buttonLink ? Link : "div";
-  const wrapperProps = image.buttonLink ? { to: image.buttonLink, className: "block group" } : { className: "group" };
+          {visibleImages.map((image, index) => {
+            const Wrapper = image.buttonLink ? Link : "div";
+            const wrapperProps = image.buttonLink
+              ? { to: image.buttonLink, className: "block group" }
+              : { className: "group" };
 
-  return (
-    <div
-      key={index}
-      className={`flex-shrink-0 w-full transition-transform duration-300 ${
-        itemsPerView === 2
-          ? "sm:w-1/2"
-          : itemsPerView === 3
-          ? "lg:w-1/3 sm:w-1/2"
-          : "w-full"
-      }`}
-    >
-      <Wrapper {...wrapperProps}>
-        <div className="overflow-hidden">
-          <img
-            src={image.src || image}
-            alt={`Slide ${index}`}
-            className="w-full h-64 sm:h-72 object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
-          />
-        </div>
+            return (
+              <div
+                key={index}
+                className={`flex-shrink-0 w-full transition-transform duration-300 ${
+                  itemsPerView === 2
+                    ? "sm:w-1/2"
+                    : itemsPerView === 3
+                    ? "lg:w-1/3 sm:w-1/2"
+                    : "w-full"
+                }`}
+              >
+                <Wrapper {...wrapperProps}>
+                  <div className="overflow-hidden">
+                    <img
+                      src={image.src || image}
+                      alt={`Slide ${index}`}
+                      className="w-full h-64 sm:h-72 object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                    />
+                  </div>
 
-        {image.description || image.buttonText ? (
-                <div className="mt-4 ">
-                  {image.description && (
-                    <p className="text-sm text-[#DBDBDB] mb-4">
-                      {image.description}
-                    </p>
-                  )}
-                  {image.buttonText && (
-                    <p
-                      className="inline-block text-[#E9204F] border-b border-b-gray-700 hover:border-b-[#c71a43] transition"
-                    >
-                      {image.buttonText}
-                    </p>
-                  )}
-                </div>
-        ) : null}
-      </Wrapper>
-    </div>
-  );
-})}
+                  {image.description || image.buttonText ? (
+                    <div className="mt-4 ">
+                      {image.description && (
+                        <p className="text-sm text-[#DBDBDB] mb-4">
+                          {image.description}
+                        </p>
+                      )}
+                      {image.buttonText && (
+                        <p className="inline-block text-[#E9204F] border-b border-b-gray-700 group-hover:border-b-[#c71a43] transition">
+                          {image.buttonText}
+                        </p>
+                      )}
+                    </div>
+                  ) : null}
+                </Wrapper>
+              </div>
+            );
+          })}
         </div>
 
         {/* Arrows for sm+ screens (absolute left/right) */}

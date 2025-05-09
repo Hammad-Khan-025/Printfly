@@ -1,50 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const SingleService = ({
   logo,
   bgImage,
   title,
-  description,
   aboutPara1,
   aboutPara2,
-  gridItems
+  gridItems,
 }) => {
-
-  const MiniSlider = ({ images }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-  
-    const handleMouseEnter = () => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    };
-  
-    return (
-      <div
-        className="relative w-full h-full overflow-hidden perspective-1000"
-        onMouseEnter={handleMouseEnter}
-      >
-        {images.map((img, idx) => {
-          const isCurrent = idx === currentIndex;
-          return (
-            <div
-              key={idx}
-              className={`absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out ${
-                isCurrent ? "opacity-100 z-20" : "opacity-0 z-10"
-              }`}
-            >
-              <img
-                src={img}
-                alt={`Slide ${idx}`}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          );
-        })}
-      </div>
-    );
-  };
-  
-  
-
   return (
     <section>
       {/* Hero Section */}
@@ -87,29 +50,32 @@ const SingleService = ({
 
       {/* Grid Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-12 sm:py-20 px-5 sm:px-0 bg-black text-white max-w-screen-xl mx-auto">
-        {gridItems.map((item, index) => (
-          <div
-            key={index}
-            className={`aspect-[4/3] ${
-              item.type === "text"
-                ? "bg-white text-black p-4 sm:p-6 flex items-center justify-center"
-                : ""
-            }`}
-          >
-            {item.type === "slider" ? (
-              <MiniSlider images={item.images} />
-            ) : (
-              <div className="font-glegoo sm:px-8">
-                <h2 className="font-semibold text-xl sm:text-2xl mb-2 text-[#121212]">
-                  {item.title}
-                </h2>
-                <p className="text-sm leading-7 text-[#121212]">
-                  {item.content}
-                </p>
-              </div>
-            )}
-          </div>
-        ))}
+      {gridItems.map((item, index) => (
+  <div
+    key={index}
+    className={`aspect-[4/3] overflow-hidden flex ${
+      item.type === "text"
+        ? "bg-white text-black p-4 sm:p-6 items-center justify-center"
+        : "bg-black"
+    }`}
+  >
+    {item.type === "slider" ? (
+      <img
+        src={item.image}
+        alt={`Grid item ${index}`}
+        className="w-full h-full object-cover filter grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
+      />
+    ) : (
+      <div className="font-glegoo sm:px-8">
+        <h2 className="font-semibold text-xl sm:text-2xl mb-2 text-[#121212]">
+          {item.title}
+        </h2>
+        <p className="text-sm leading-7 text-[#121212]">{item.content}</p>
+      </div>
+    )}
+  </div>
+))}
+
       </div>
     </section>
   );
