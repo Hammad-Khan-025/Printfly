@@ -25,6 +25,8 @@ import blogSlider3 from "../assets/home-images/blog-images/slider3.jpg";
 import blogSlider4 from "../assets/home-images/blog-images/slider4.jpg";
 import blogSlider5 from "../assets/home-images/blog-images/slider5.jpg";
 
+import {blogsData} from "../components/BlogData"; 
+
 import LogoSlider from "../components/LogoSlider";
 import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
@@ -54,38 +56,19 @@ const Home = () => {
     workSlider5,
   ];
   
-  const blogSliderImages = [
-    {
-      src: blogSlider1,
-      description: "FESPA 2025 events to unite visionaries across and beyond Print, Signage and Personalisation",
-      buttonText: "Continue Reading",
-      buttonLink: "/blogs",
-    },
-    {
-      src: blogSlider2,
-      description: "FESPA 2025 events to unite visionaries across and beyond Print, Signage and Personalisation",
-      buttonText: "Continue Reading",
-      buttonLink: "/blogs",
-    },
-    {
-      src: blogSlider3,
-      description: "FESPA 2025 events to unite visionaries across and beyond Print, Signage and Personalisation",
-      buttonText: "Continue Reading",
-      buttonLink: "/blogs",
-    },
-    {
-      src: blogSlider4,
-      description: "FESPA 2025 events to unite visionaries across and beyond Print, Signage and Personalisation",
-      buttonText: "Continue Reading",
-      buttonLink: "/blogs",
-    },
-    {
-      src: blogSlider5,
-      description: "FESPA 2025 events to unite visionaries across and beyond Print, Signage and Personalisation",
-      buttonText: "Continue Reading",
-      buttonLink: "/blogs",
-    },
-  ];  
+ const blogSliderImages = blogsData.map(blog => {
+    console.log("Home - Mapping Blog:", blog);
+    console.log("Home - Mapping blog.id:", blog.id);
+    return {
+      id: blog.id,
+      src: blog.bannerImage,
+      description: blog.title,
+      buttonText: blog.buttonText,
+      buttonLink: `/blogs/${blog.id}`,
+    };
+  });
+
+  console.log("Home - blogSliderImages being passed to Slider:", blogSliderImages);
 
   return (
     <article className="pt-20">

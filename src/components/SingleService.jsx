@@ -50,32 +50,33 @@ const SingleService = ({
 
       {/* Grid Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-12 sm:py-20 px-5 sm:px-0 bg-black text-white max-w-screen-xl mx-auto">
-      {gridItems.map((item, index) => (
-  <div
-    key={index}
-    className={`aspect-[4/3] overflow-hidden flex ${
-      item.type === "text"
-        ? "bg-white text-black p-4 sm:p-6 items-center justify-center"
-        : "bg-black"
-    }`}
-  >
-    {item.type === "slider" ? (
-      <img
-        src={item.image}
-        alt={`Grid item ${index}`}
-        className="w-full h-full object-cover filter grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
-      />
-    ) : (
-      <div className="font-glegoo sm:px-8">
-        <h2 className="font-semibold text-xl sm:text-2xl mb-2 text-[#121212]">
-          {item.title}
-        </h2>
-        <p className="text-sm leading-7 text-[#121212]">{item.content}</p>
-      </div>
-    )}
-  </div>
-))}
-
+        {gridItems.map((item, index) => (
+          <div
+            key={index}
+            className={`aspect-[4/3] overflow-hidden flex ${
+              item.type === "text"
+                ? "bg-white text-black p-4 sm:p-6 items-center justify-center"
+                : "bg-black"
+            }`}
+          >
+            {item.type === "slider" ? (
+              <img
+                src={item.image}
+                alt={`Grid item ${index}`}
+                className="w-full h-full object-cover filter grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500"
+              />
+            ) : (
+              <div className="font-glegoo sm:px-8">
+                <h2 className="font-semibold text-xl sm:text-2xl mb-2 text-[#121212]">
+                  {item.title}
+                </h2>
+                <p className="text-sm leading-7 text-[#121212]">
+                  {item.content}
+                </p>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );

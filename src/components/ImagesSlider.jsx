@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 
-const ImagesSlide = ({ images, title, para }) => {
+const ImagesSlider = ({ images, title, para }) => {
   const [startIndex, setStartIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(1);
 
@@ -153,4 +153,4 @@ const ImagesSlide = ({ images, title, para }) => {
   );
 };
 
-export default ImagesSlide;
+export default ImagesSlider;

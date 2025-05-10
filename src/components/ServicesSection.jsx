@@ -46,7 +46,7 @@ const ServicesSection = () => {
       iconB: icon2b,
       path: "/services/ui-ux-design",
       description:
-        "Graphic designing is the art of visual communication that brings ideas to life through creativity and style. It combines aesthetics and strategy to deliver powerful, memorable messages.",
+        "Intuitive, user-centered designs that enhance functionality and user satisfaction. Seamlessly blending aesthetics with usability for impactful digital experiences.",
     },
     {
       title: "E-Learning Training Courses",
@@ -54,7 +54,7 @@ const ServicesSection = () => {
       iconB: icon3b,
       path: "/services/e-learning-training-courses",
       description:
-        "Graphic designing is the art of visual communication that brings ideas to life through creativity and style. It combines aesthetics and strategy to deliver powerful, memorable messages.",
+        "Engaging, interactive courses designed to enhance learning anytime, anywhere. Custom-built content that empowers learners and drives real-world results.",
     },
     {
       title: "Desktop Publication",
@@ -62,7 +62,7 @@ const ServicesSection = () => {
       iconB: icon4b,
       path: "/services/desktop-publication",
       description:
-        "Graphic designing is the art of visual communication that brings ideas to life through creativity and style. It combines aesthetics and strategy to deliver powerful, memorable messages.",
+        "Desktop publishing involves using software to create visually appealing layouts for print and digital media. It combines text and graphics to produce brochures, magazines, flyers, and more.",
     },
     {
       title: "Web & App Development",
@@ -70,7 +70,7 @@ const ServicesSection = () => {
       iconB: icon5b,
       path: "/services/web-app-development",
       description:
-        "Graphic designing is the art of visual communication that brings ideas to life through creativity and style. It combines aesthetics and strategy to deliver powerful, memorable messages.",
+        "Building responsive, high-performance websites and apps tailored to your needs. Innovative solutions that provide seamless user experiences across all devices.",
     },
     {
       title: "E-Learning Training Videos",
@@ -78,7 +78,7 @@ const ServicesSection = () => {
       iconB: icon6b,
       path: "/services/e-learning-training-videos",
       description:
-        "Graphic designing is the art of visual communication that brings ideas to life through creativity and style. It combines aesthetics and strategy to deliver powerful, memorable messages.",
+        "Dynamic, visually engaging videos that simplify complex topics for effective learning. Tailored to your audience, designed to boost retention and performance.",
     },
     {
       title: "Illustration Design",
@@ -86,15 +86,14 @@ const ServicesSection = () => {
       iconB: icon7b,
       path: "/services/illustration-design",
       description:
-        "Graphic designing is the art of visual communication that brings ideas to life through creativity and style. It combines aesthetics and strategy to deliver powerful, memorable messages.",
+        "Bringing ideas to life with custom, hand-crafted visuals tailored to your brand. From concept to completion, every detail is designed to captivate and communicate.",
     },
     {
       title: "Search Engine Optimization",
       iconA: icon8a,
       iconB: icon8b,
       path: "/services/search-engine-optimization",
-      description:
-        "Graphic designing is the art of visual communication that brings ideas to life through creativity and style. It combines aesthetics and strategy to deliver powerful, memorable messages.",
+      description: "Boosting your online presence with strategies that drive traffic and improve rankings. Optimized content and technical solutions that ensure visibility and growth.",
     },
     {
       title: "Documentary Videos",
@@ -102,7 +101,7 @@ const ServicesSection = () => {
       iconB: icon9b,
       path: "/services/documentary-videos",
       description:
-        "Graphic designing is the art of visual communication that brings ideas to life through creativity and style. It combines aesthetics and strategy to deliver powerful, memorable messages.",
+        "Powerful storytelling through cinematic visuals and compelling narratives. Capturing real stories that inform, inspire, and leave a lasting impact.",
     },
     {
       title: "Printing Publication",
@@ -110,15 +109,14 @@ const ServicesSection = () => {
       iconB: icon10b,
       path: "/services/printing-publication",
       description:
-        "Graphic designing is the art of visual communication that brings ideas to life through creativity and style. It combines aesthetics and strategy to deliver powerful, memorable messages.",
+        "High-quality print solutions crafted for maximum visual impact and clarity.  From brochures to books, we turn your ideas into professionally printed reality.",
     },
     {
       title: "E-Commerce Store Services",
       iconA: icon11a,
       iconB: icon11b,
       path: "/services/ecommerce-store-services",
-      description:
-        "Graphic designing is the art of visual communication that brings ideas to life through creativity and style. It combines aesthetics and strategy to deliver powerful, memorable messages.",
+      description: "Building and optimizing online stores that enhance user experience and drive sales. Custom solutions for product management, payment integration, and seamless shopping.",
     },
     {
       title: "Illustrations Videos",
@@ -126,7 +124,7 @@ const ServicesSection = () => {
       iconB: icon12b,
       path: "/services/illustrations-videos",
       description:
-        "Graphic designing is the art of visual communication that brings ideas to life through creativity and style. It combines aesthetics and strategy to deliver powerful, memorable messages.",
+        "Animated illustrations that bring concepts to life with clarity and creativity. Perfect for explainer videos, storytelling, and engaging visual content.",
     },
   ];  
 
