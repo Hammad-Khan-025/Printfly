@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import clientImage from "../assets/home-images/work-images/client-image.jpg";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import clientImage from "../assets/home-images/client-image.jpg";
 import icon1a from "../assets/home-images/services-images/icon1a.png";
 import icon2a from "../assets/home-images/services-images/icon2a.png";
 import icon3a from "../assets/home-images/services-images/icon3a.png";
@@ -25,7 +26,7 @@ import blogSlider3 from "../assets/home-images/blog-images/slider3.jpg";
 import blogSlider4 from "../assets/home-images/blog-images/slider4.jpg";
 import blogSlider5 from "../assets/home-images/blog-images/slider5.jpg";
 
-import {blogsData} from "../components/BlogData"; 
+import { blogsData } from "../components/BlogData";
 
 import LogoSlider from "../components/LogoSlider";
 import HeroSection from "../components/HeroSection";
@@ -33,6 +34,26 @@ import ServicesSection from "../components/ServicesSection";
 import ImagesSlider from "../components/ImagesSlider";
 
 const Home = () => {
+  const location = useLocation();
+  const [scrollToId, setScrollToId] = useState(null);
+
+  useEffect(() => {
+    if (location.state && location.state.scrollToId) {
+      setScrollToId(location.state.scrollToId);
+    }
+  }, [location.state]);
+
+  useEffect(() => {
+    if (scrollToId) {
+      const section = document.getElementById(scrollToId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+      // Clear the state so it doesn't trigger on subsequent renders
+      setScrollToId(null);
+    }
+  }, [scrollToId]);
+
   const services = [
     { title: "Graphic Designing", icon: icon1a },
     { title: "UI/UX Design", icon: icon2a },
@@ -48,27 +69,15 @@ const Home = () => {
     { title: "Illustrations Videos", icon: icon12a },
   ];
 
-  const workSliderImages = [
-    workSlider1,
-    workSlider2,
-    workSlider3,
-    workSlider4,
-    workSlider5,
-  ];
-  
- const blogSliderImages = blogsData.map(blog => {
-    console.log("Home - Mapping Blog:", blog);
-    console.log("Home - Mapping blog.id:", blog.id);
-    return {
-      id: blog.id,
-      src: blog.bannerImage,
-      description: blog.title,
-      buttonText: blog.buttonText,
-      buttonLink: `/blogs/${blog.id}`,
-    };
-  });
+  const workSliderImages = [workSlider1, workSlider2, workSlider3, workSlider4, workSlider5];
 
-  console.log("Home - blogSliderImages being passed to Slider:", blogSliderImages);
+  const blogSliderImages = blogsData.map((blog) => ({
+    id: blog.id,
+    src: blog.bannerImage,
+    description: blog.title,
+    buttonText: blog.buttonText,
+    buttonLink: `/blogs/${blog.id}`,
+  }));
 
   return (
     <article className="pt-20">
@@ -84,11 +93,7 @@ const Home = () => {
 
       {/* Work Section */}
       <section id="work" className="max-w-screen-xl mx-auto py-14">
-        <ImagesSlider
-          images={workSliderImages}
-          title="WORK"
-          para="things we’ve made"
-        />
+        <ImagesSlider images={workSliderImages} title="WORK" para="things we’ve made" />
       </section>
 
       <div className="w-full h-[1px] mt-4 mx-auto bg-[#434343] rounded-full"></div>
@@ -104,19 +109,16 @@ const Home = () => {
             />
           </div>
           <div>
-            <h1 className="text-[#B2B1B1] text-2xl sm:text-4xl">
-              WHAT CLIENT SAY.
-            </h1>
+            <h1 className="text-[#B2B1B1] text-2xl sm:text-4xl">WHAT CLIENT SAY.</h1>
             <h2 className="text-[#E9204F] mt-3">from all over the world </h2>
-            <div className="w-full h-[1px] mt-3 mx-auto bg-[#E9204F] rounded-full"></div>
+            <div className="w-60 sm:w-full h-[1px] mt-3 mx-auto bg-[#E9204F] rounded-full"></div>
             <p className="text-[#535252] max-w-[23rem] mt-3">
-              Client testimonials are a crucial part of a digital agency's
-              branding and marketing strategy. They provide social proof and
-              help build trust with potential clients.
+              Client testimonials are a crucial part of a digital agency's branding and marketing strategy. They provide
+              social proof and help build trust with potential clients.
             </p>
           </div>
         </div>
-        <LogoSlider />
+        {/* <LogoSlider /> */}
       </section>
 
       <div className="w-full h-[1px] mt-4 mx-auto bg-[#434343] rounded-full"></div>

@@ -20,7 +20,7 @@ const Footer = () => {
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl sm:text-3xl py-1.5 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
+                className="text-2xl sm:text-3xl py-1.5 px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
               >
                 <FaFacebookSquare />
               </a>
@@ -28,7 +28,7 @@ const Footer = () => {
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl sm:text-3xl py-1.5 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
+                className="text-2xl sm:text-3xl py-1.5 px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
               >
                 <FaInstagramSquare />
               </a>
@@ -36,7 +36,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl sm:text-3xl py-1.5 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
+                className="text-2xl sm:text-3xl py-1.5 px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
               >
                 <FaLinkedin />
               </a>
@@ -44,7 +44,7 @@ const Footer = () => {
                 href="https://wa.me/923458507835"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl sm:text-3xl py-1.5 px-1 sm:px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
+                className="text-2xl sm:text-3xl py-1.5 px-2 border border-[#DAD9D9] rounded-lg hover:text-[#E9204F] hover:border-[#E9204F]"
               >
                 <FaWhatsappSquare />
               </a>

@@ -1,20 +1,28 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "../assets/home-images/printfly-logo.png";
 import { RiMenu3Line } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname === "/") {
+      // If on the home page, scroll directly
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // If on an inner page, navigate to home and then scroll
+      navigate("/", { state: { scrollToId: id } });
     }
     setIsMenuOpen(false);
   };
@@ -31,7 +39,9 @@ const Header = () => {
   return (
     <header className="flex justify-between items-center max-w-screen-xl mx-auto p-5 sm:p-8">
       {/* Logo */}
-      <img src={logo} alt="PrintfLy Logo" />
+      <Link to="/">
+        <img src={logo} alt="PrintfLy Logo" />
+      </Link>
 
       {/* Hamburger or Close Icon */}
       <div className="md:hidden text-white cursor-pointer" onClick={toggleMenu}>
