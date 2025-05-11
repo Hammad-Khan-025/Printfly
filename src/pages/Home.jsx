@@ -118,7 +118,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-        {/* <LogoSlider /> */}
+        <LogoSlider />
       </section>
 
       <div className="w-full h-[1px] mt-4 mx-auto bg-[#434343] rounded-full"></div>

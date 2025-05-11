@@ -9,11 +9,6 @@ import img4 from "../../assets/home-images/services-images/ui-ux-design/img4.jpg
 import img5 from "../../assets/home-images/services-images/ui-ux-design/img5.jpg";
 import img6 from "../../assets/home-images/services-images/ui-ux-design/img6.jpg";
 
-import slider1 from "../../assets/home-images/services-images/ui-ux-design/slider1.jpg";
-import slider2 from "../../assets/home-images/services-images/ui-ux-design/slider2.jpg";
-import slider3 from "../../assets/home-images/services-images/ui-ux-design/slider3.jpg";
-import slider4 from "../../assets/home-images/services-images/ui-ux-design/slider4.jpg";
-import slider5 from "../../assets/home-images/services-images/ui-ux-design/slider5.jpg";
 
 import SingleService from "../../components/SingleService";
 import ImagesSlider from "../../components/ImagesSlider";
@@ -80,7 +75,7 @@ const UIUXDesign = () => {
     },
   ];
 
-  const images = [slider1, slider2, slider3, slider4, slider5];
+  // const images = [slider1, slider2, slider3, slider4, slider5];
   return (
     <article>
       <SingleService

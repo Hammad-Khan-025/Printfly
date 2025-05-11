@@ -9,11 +9,6 @@ import img4 from "../../assets/home-images/services-images/graphic-design/img4.j
 import img5 from "../../assets/home-images/services-images/graphic-design/img5.jpg";
 import img6 from "../../assets/home-images/services-images/graphic-design/img6.jpg";
 
-import slider1 from "../../assets/home-images/services-images/graphic-design/slider1.jpg";
-import slider2 from "../../assets/home-images/services-images/graphic-design/slider2.jpg";
-import slider3 from "../../assets/home-images/services-images/graphic-design/slider3.jpg";
-import slider4 from "../../assets/home-images/services-images/graphic-design/slider4.jpg";
-import slider5 from "../../assets/home-images/services-images/graphic-design/slider5.jpg";
 
 import SingleService from "../../components/SingleService";
 import ImagesSlider from "../../components/ImagesSlider";
@@ -87,7 +82,7 @@ const GraphicDesign = () => {
     },
   ];
 
-  const images = [slider1, slider2, slider3, slider4, slider5];
+  // const images = [slider1, slider2, slider3, slider4, slider5];
   return (
     <article>
       <SingleService

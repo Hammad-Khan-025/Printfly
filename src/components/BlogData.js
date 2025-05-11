@@ -10,7 +10,7 @@ export const blogsData = [
   {
     id: 1,
     bannerImage: blogSlider1,
-    title: "FESPA 2025 events to unite visionaries across and beyond Print, Signage and Personalisation",
+    title: "FESPA 2025 events to unite visionaries beyond Print",
     author: "Aron Larsson",
     date: "January 28, 2019",
     buttonText: "Continue Reading",

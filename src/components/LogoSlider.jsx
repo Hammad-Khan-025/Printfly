@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
-import logoSlider1 from "../assets/home-images/logo-slider/slider1.jpg";
-import logoSlider2 from "../assets/home-images/logo-slider/slider2.jpg";
-import logoSlider3 from "../assets/home-images/logo-slider/slider3.jpg";
-import logoSlider4 from "../assets/home-images/logo-slider/slider4.jpg";
-import logoSlider5 from "../assets/home-images/logo-slider/slider5.jpg";
-import logoSlider6 from "../assets/home-images/logo-slider/slider6.jpg";
+import logoSlider1 from "../assets/home-images/logo-slider/logo1.jpg";
+import logoSlider2 from "../assets/home-images/logo-slider/logo2.jpg";
+import logoSlider3 from "../assets/home-images/logo-slider/logo3.jpg";
+import logoSlider4 from "../assets/home-images/logo-slider/logo4.jpg";
+import logoSlider5 from "../assets/home-images/logo-slider/logo5.jpg";
+import logoSlider6 from "../assets/home-images/logo-slider/logo6.jpg";
 
 const originalLogos = [
   logoSlider1,
