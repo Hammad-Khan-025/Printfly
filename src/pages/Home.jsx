@@ -20,11 +20,6 @@ import workSlider3 from "../assets/home-images/work-images/slider3.jpg";
 import workSlider4 from "../assets/home-images/work-images/slider4.jpg";
 import workSlider5 from "../assets/home-images/work-images/slider5.jpg";
 
-import blogSlider1 from "../assets/home-images/blog-images/slider1.jpg";
-import blogSlider2 from "../assets/home-images/blog-images/slider2.jpg";
-import blogSlider3 from "../assets/home-images/blog-images/slider3.jpg";
-import blogSlider4 from "../assets/home-images/blog-images/slider4.jpg";
-import blogSlider5 from "../assets/home-images/blog-images/slider5.jpg";
 
 import { blogsData } from "../components/BlogData";
 
